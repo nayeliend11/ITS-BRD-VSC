@@ -12,4 +12,4 @@
 	url = https://github.com/ITS-BRD/ITS_Keil_prj_base.git
 [submodule "lwip"]
 	path = lwip
-	url = https://github.com/lwip-tcpip/lwip.git
+	url = https://github.com/ITS-BRD/ITS_Keil_prj_base.git
