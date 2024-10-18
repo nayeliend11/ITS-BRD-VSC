@@ -5,7 +5,15 @@
       "target": "ITSboard_Assembly",
       "config": {
         "run": "arm-debugger.flash: Flash Device"
-      }
+      },
+      "projects": [
+        {
+          "path": "Programs/TestNewFontAssambler/TestNewFontAssembler.cproject.yml",
+          "config": {
+            "run": "arm-debugger.flash: Flash Device"
+          }
+        }
+      ]
     },
     {
       "path": "Programs/TestNewFont/TestNewFont.csolution.yml",
