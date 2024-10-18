@@ -102,6 +102,6 @@
   "cmake.ignoreCMakeListsMissing": true,
   "C_Cpp_Runner.msvcBatchPath": "",
   "clangd.arguments": [
-    "--compile-commands-dir=/Users/martin/Documents/git/ITS-BRD-VSC/Programs/TestNewFontAssambler/out/TestNewFontAssembler/ITSboard_Assembly/Debug"
+    "--compile-commands-dir=/Users/dev/Documents/git/ITS-BRD-VSC/Programs/TestNewFontAssambler/out/TestNewFontAssembler/ITSboard_Assembly/Debug"
   ]
 }
