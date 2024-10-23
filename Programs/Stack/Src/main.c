@@ -113,7 +113,8 @@ void Scheduler(void) {
 /* Task 0 - Beispielhafte Implementierung */
 void Task0(void) {
     // Task 0 Funktionalität
-    // Kommentar: Diese Task verarbeitet die Sensordaten
+    // Beispiel: LED toggeln
+    // Kommentar: Diese Task toggelt die LED0
 	toggleGPIO(&led_pins[0]);
     currentState = STATE_TASK0;
 }
@@ -131,7 +132,8 @@ void Task1(void) {
 /* Task 2 - Beispielhafte Implementierung */
 void Task2(void) {
     // Task 2 Funktionalität
-    // Kommentar: Diese Task liest einen Sensorwert
+    // Beispiel: LED toggeln
+    // Kommentar: Diese Task toggelt die LED2
 	toggleGPIO(&led_pins[2]);
     currentState = STATE_TASK2;
 }
