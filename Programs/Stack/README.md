@@ -1,6 +1,9 @@
+## Inhaltsverzeichnis
+1. [Allgemein: lwIP-Projekt des RN ITS (HAW Hamburg)](#allgemein-lwip-projekt-des-rn-its-haw-hamburg)
+2. [Anmerkungen](#anmerkungen)
+3. [LiveCoding Video 01](#livecoding-video-01)
 
-
-## lwIP-Projekt des RN ITS (HAW Hamburg)
+## Allgemein: lwIP-Projekt des RN ITS (HAW Hamburg)
 
 Das lwIP (lightweight IP)-Projekt ist ein Open-Source-Stack zur Implementierung des TCP/IP-Protokolls, das speziell für eingebettete Systeme mit begrenztem Speicher und Ressourcen entwickelt wurde. Es ermöglicht die Netzwerkanbindung solcher Systeme, ohne dass die volle Komplexität und die Speicheranforderungen traditioneller TCP/IP-Stacks benötigt werden. lwIP unterstützt gängige Protokolle wie TCP, UDP, ICMP, DHCP und PPP und ist in C geschrieben, was es besonders anpassungsfähig macht. Durch seine modulare Struktur lässt es sich leicht in Systeme mit verschiedenen Hardware-Architekturen integrieren.
 
