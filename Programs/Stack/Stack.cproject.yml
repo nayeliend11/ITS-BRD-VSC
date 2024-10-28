@@ -21,6 +21,7 @@ project:
         - ../../DisplayWaveshare/Inc
         - ../../ITS_BRD_LIB/Inc
         - ../../ITS_BRD_LIB/Utilities/AddFonts
+        - ../../lwip/src/include/
 
       #debug: "on"  # Aktiviert den Debug-Modus
 
@@ -173,6 +174,32 @@ project:
       files:
         - file: ../../ITS_BRD_LIB/Inc/lcd.h
 
+    # lwIP/Source: Netzwerkstapel-Dateien von lwIP
+    - group: lwIP/Source
+      files:
+        - file: ../../lwip/src/netif/ethernet.c
+        - file: ../../lwip/src/core/ipv4/ip4.c
+        - file: ../../lwip/src/core/ip.c
+        - file: ../../lwip/src/core/ipv4/ip4_addr.c
+        - file: ../../lwip/src/core/ipv4/ip4_frag.c
+        - file: ../../lwip/src/core/ipv4/acd.c
+        - file: ../../lwip/src/core/ipv4/dhcp.c
+        - file: ../../lwip/src/core/ipv4/etharp.c
+        - file: ../../lwip/src/core/ipv4/icmp.c
+        - file: ../../lwip/src/core/def.c
+        - file: ../../lwip/src/core/mem.c
+        - file: ../../lwip/src/core/memp.c        
+        - file: ../../lwip/src/core/netif.c
+        - file: ../../lwip/src/core/pbuf.c
+        - file: ../../lwip/src/core/tcp.c
+        - file: ../../lwip/src/core/tcp_in.c
+        - file: ../../lwip/src/core/tcp_out.c
+        - file: ../../lwip/src/core/timeouts.c
+        - file: ../../lwip/src/core/udp.c
+        - file: ../../lwip/src/core/inet_chksum.c
+        - file: ../../lwip/src/core/init.c
+        - file: ../../lwip/src/core/stats.c
+        - file: ../../lwip/src/core/dns.c      
 
     # Benutzerdefinierte Programmdateien
     - group: Program/User/Src
