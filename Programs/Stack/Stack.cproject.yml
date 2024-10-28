@@ -21,8 +21,9 @@ project:
         - ../../DisplayWaveshare/Inc
         - ../../ITS_BRD_LIB/Inc
         - ../../ITS_BRD_LIB/Utilities/AddFonts
+        - ../../lwip
         - ../../lwip/src/include/
-
+        - ../../lwip/src/include/lwip
       #debug: "on"  # Aktiviert den Debug-Modus
 
       define:  # Präprozessordefinitionen
