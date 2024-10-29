@@ -1,8 +1,8 @@
 /**
  ******************************************************************************
  * @file    main.c
- * @author  Franz Korf
- * @brief   Kleines Testprogramm fuer neu erstelle Fonts.
+ * @author  Martin Becke
+ * @brief   Kleines Testprogramm fuer lwip
  ******************************************************************************
  */
 /* Includes ------------------------------------------------------------------*/
