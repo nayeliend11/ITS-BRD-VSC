@@ -1,6 +1,6 @@
 /**
  ******************************************************************************
- * @file    main_http.c
+ * @file   ehternetif.c
  * @author  TI Team
  *          HAW-Hamburg
  *          Labor f�r technische Informatik
@@ -12,8 +12,14 @@
  * @brief   Base für die Ethernet Config
  ******************************************************************************
  */
-
- // This code Bases on the STM32CubeF4 HAL and LWIP Library examples  
+ 
+ // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ //
+ // !!! This code Bases on the STM32CubeF4 HAL and LWIP Library examples !!!
+ // lwip/contrib/examples/ethernetif/ethernetif.c
+ // https://github.com/STMicroelectronics/STM32CubeF4/blob/master/Projects/STM324x9I_EVAL/Applications/LwIP/LwIP_UDP_Echo_Client/Src/ethernetif.c
+ //
+ // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
  /**
  * This code initializes and manages the Ethernet interface on an STM32F4 microcontroller.
