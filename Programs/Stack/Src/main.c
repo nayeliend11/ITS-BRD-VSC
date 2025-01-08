@@ -10,15 +10,12 @@
 #include <arm_compat.h>
 
 #include "LCD_GUI.h"
-#include "init.h"
 #include "stm32f4xx_hal.h"
 #include <stdint.h>
 
 #include "LCD_GUI.h"
 #include "LCD_Touch.h"
-#include "additionalFonts.h"
-#include "error.h"
-#include "fontsFLASH.h"
+
 #include "lcd.h"
 
 #include "led.h"
