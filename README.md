@@ -213,3 +213,15 @@ Mehr: [https://developer.arm.com/documentation/101407/0541/User-Interface/Projec
 
 ## Dokumentation (To be fixed)
 - s. [Wiki ITS_BRD](https://git.haw-hamburg.de/tiboard_dev/its_brd/-/wikis/**Dokumentation-der-Software-des-ITS-Board**)
+
+
+## Troubleshooting
+
+### Probleme Submodule
+Sollte es Probleme bei dem checkout der Submodule geben, oder Fehlermeldungen erscheinen, die auf die Submodule verweisen, sollte folgendes probiert werden. 
+
+```
+git submodule foreach --recursive git reset --hard
+git submodule foreach --recursive git clean -fd
+git submodule update --init --recursive --force
+```
