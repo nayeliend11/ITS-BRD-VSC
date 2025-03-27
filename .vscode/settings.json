@@ -105,11 +105,20 @@
           }
         }
       ]
+    },
+    {
+      "path": "Programs/Stack/Stack.csolution.yml",
+      "target": "ITSboard",
+      "config": {
+        "run": "arm-debugger.flash: Flash Device"
+      }
     }
   ],
   "cmake.ignoreCMakeListsMissing": true,
   "C_Cpp_Runner.msvcBatchPath": "",
   "clangd.arguments": [
-    "--compile-commands-dir=/private/tmp/ITS-BRD-VSC/Programs/TestNewFont/out/TestNewFont/ITSboard/Debug"
+
+    "--compile-commands-dir=/Users/martin/Documents/git/ITS-BRD-VSC/Programs/Stack/out/Stack/ITSboard/Debug"
+
   ]
 }
