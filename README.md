@@ -1,4 +1,4 @@
-# !!! WICHTIG, DIESE BEISPIELE NUTZEN EINE ANDERE VERSION VON DISPLAYWAVESHARE !!!
+
 
 # Inhaltsverzeichnis
 - [Anleitung zur Installation von ST-Link](#anleitung-zur-installation-von-st-Link)
