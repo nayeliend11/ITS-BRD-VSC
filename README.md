@@ -28,7 +28,7 @@ ST-Link ist notwendig zum Flashen und Debuggen von Mikrocontrollern, die von STM
 2. **Installation:**
    * Führen Sie die heruntergeladene `.exe` Datei aus, um die Treiber und das Utility zu installieren.
    * Folgen Sie den Anweisungen auf dem Bildschirm, um die Installation abzuschließen.
-
+3. Stellen Sie eine vollständige Installation von git sicher.
 ## Linux
 
 1. **Installation (über Paketmanager):**
