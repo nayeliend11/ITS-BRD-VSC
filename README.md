@@ -81,7 +81,7 @@ Visual Studio Code (VSCode) ist ein leistungsfähiger und kostenloser Code-Edito
 ### 1. Visual Studio Code Webseite besuchen
 Öffne deinen bevorzugten Webbrowser und gehe auf die offizielle Webseite von Visual Studio Code:
 
-[Download VSCode](https://code.visualstudio.com/)
+[Download VSCode](https://code.visualstudio.com/) oder öffne diese Seite https://code.visualstudio.com/
 
 ### 2. Passende Version herunterladen
 Auf der Webseite wird automatisch die passende Version für dein Betriebssystem vorgeschlagen. Sollte dies nicht der Fall sein, wähle dein Betriebssystem manuell aus.
@@ -112,40 +112,53 @@ Auf der Webseite wird automatisch die passende Version für dein Betriebssystem 
 2. Installieren Sie das Paket über das grafische Softwarecenter, falls verfügbar, oder über die Befehlszeile mit:     
    ```bash
    sudo apt install ./<datei>.deb
+   ```
 
 # Installation von Arm Keil Studio Pack in VS Code
 
-1. Starten Sie Visual Studio Code und öffnen Sie die Erweiterungsansicht durch Klicken auf das Erweiterungssymbol in der Aktivitätsleiste oder durch Drücken von `Strg+Shift+X`.
+1. Starten Sie Visual Studio Code und klicken auf der linken Seite auf Extentions oder drücken `Strg+Shift+X`.
 
-2. Suchen Sie im Suchfeld nach "Keil Studio Pack" und klicken Sie auf die Schaltfläche "Installieren", um alle Erweiterungen im Arm Keil Studio Pack zu installieren.
+2. Suchen Sie in dem Extentions-Suchfeld nach "Arm Keil Studio Pack" und klicken Sie auf die Schaltfläche "Installieren", um alle Erweiterungen im Arm Keil Studio Pack zu installieren.
 
-3. Visual Studio Code installiert nun die Erweiterungen. Nach Abschluss der Installation sind die Erweiterungen in der Aktivitätsleiste verfügbar.
+3. Visual Studio Code installiert nun die Erweiterungen. Nach Abschluss der Installation ist auf der linken Seite (Aktivitätsleiste) die Schaltfläche CMSIS verfügbar. Mit Hilfe von CMSIS (Cortex Microcontroller Software Interface Standard) kann ein Programm im Embedded Bereich gehandelt werden. 
 
-4. Sie werden aufgefordert, eine MDK Community-Lizenz für die nicht-kommerzielle Nutzung zu aktivieren. Akzeptieren Sie diese Option, wenn Sie keine Lizenz haben und der nicht-kommerziellen Nutzung zustimmen. Wenn Sie eine kommerzielle Lizenz für Keil MDK installiert haben, lehnen Sie diese Option ab.
+4. Sie werden aufgefordert, eine MDK Community-Lizenz für die nicht-kommerzielle Nutzung zu aktivieren. Akzeptieren Sie diese Option, wenn Sie keine Lizenz haben und der nicht-kommerziellen Nutzung zustimmen. Wenn Sie eine kommerzielle Lizenz für Keil MDK installiert haben, lehnen Sie diese Option ab. In der Fussleiste wird nun "Keil MDK Community (non-commercial free of charge)" stehen
 
-6. Es hat sich auch als sinnvoll erwiesen die `ibm-assembler` Erweiterung zu installieren. 
+5. Es hat sich auch als sinnvoll erwiesen die `ibm-assembler` Erweiterung zu installieren. 
 
 Das Arm Keil Studio Pack installiert die folgenden empfohlenen Erweiterungen für die Embedded- und IoT-Softwareentwicklung auf Arm-basierten Mikrocontroller-Geräten:
 
-- Arm CMSIS Solution: Unterstützung für die Arbeit mit CMSIS-Lösungen (csolution-Projekte)
-- Arm Device Manager: Verwalten von Geräteverbindungen für Arm Cortex-M-basierte Mikrocontroller, Entwicklungsboards und Debug-Probes
-- Arm Embedded Debugger: Flashen und Debuggen auf Arm Cortex-M-Targets, die das Microsoft Debug Adapter Protocol (DAP) implementieren
-- Arm Remote Build: Durchführen von Remote-Builds von Projekten für Arm Cortex-M-Targets
-- Arm Virtual Hardware: Verwalten von Arm Virtual Hardware und Ausführen von Embedded-Anwendungen darauf
+- Arm  - Arm CMSIS Debugger
+       - Arm CMSIS Solution: Unterstützung für die Arbeit mit CMSIS-Lösungen (csolution-Projekte)
+       - Arm Debugger
+       - Arm Device Manager: Verwalten von Geräteverbindungen für Arm Cortex-M-basierte Mikrocontroller, Entwicklungsboards und Debug-Probes
+       - Arm Embedded Debugger: Flashen und Debuggen auf Arm Cortex-M-Targets, die das Microsoft Debug Adapter Protocol (DAP) implementieren
+       - Arm Keil Studio Pack (MDK c6)
+       - Arm Remote Build: Durchführen von Remote-Builds von Projekten für Arm Cortex-M-Targets
+       - Arm Virtual Hardware: Verwalten von Arm Virtual Hardware und Ausführen von Embedded-Anwendungen darauf
+       - Arm Tools Environment Manager
+- clangd
+- CDT - CDT GDB Debug Adapter Extension
+      - Memory Inspector 
+      - Peripheral Inspector
+
+
+
 
 # Anleitung zum Auschecken eines GitHub-Projekts in VS Code
 
-Folgen Sie diesen Schritten, um das GitHub-Projekt mit der URL  [https://github.com/...](https://github.com/Transport-Protocol/ITS-BRD-VSC) in Visual Studio Code auszuchecken:
+Folgen Sie diesen Schritten, um das GitHub-Projekt mit der URL "https://github.com/Transport-Protocol/ITS-BRD-VSC/ITS-BRD-VSC.git" in Visual Studio Code auszuchecken:
 
 1. Öffnen Sie Visual Studio Code.
 
 2. Öffnen Sie die Befehlspalette, indem Sie `Strg+Shift+P` (Windows/Linux) oder `Cmd+Shift+P` (macOS) drücken.
 
-3. Geben Sie "Git: Clone" in die Befehlspalette ein und wählen Sie den Befehl "Git: Clone" aus.
+3. Geben Sie "Git: Clone" in die Befehlspalette ein und wählen Sie den Befehl "Git: Clone" aus. Wenn dort "Git: Clone" nicht erscheint, muss erst git installiert werden.
 
-4. Geben Sie die URL des GitHub-Repositorys ein: [https://github.com/...](https://github.com/Transport-Protocol/ITS-BRD-VSC) oder wählen Sie aus GitHub clonen (bevorzugt) und wählen Sie ITS-BRD/ITS-BRD.
+4. Geben Sie die URL des GitHub-Repositorys ein: `https://github.com/Transport-Protocol/ITS-BRD-VSC.git` ein.
+(Wenn Sie die GitHub Erweiterung installiert haben, können Sie das Projekt auch  mit ITS-BRD/ITS-BRD clonen )
 
-5. Wählen Sie einen Ordner auf Ihrem lokalen Computer aus, in den das Repository geklont werden soll.
+5. Wählen Sie einen Ordner auf Ihrem lokalen Computer aus, in den das Repository geklont werden soll. ( In diesem Ordner wird der Ordner ITS-BRD-VSC angelegt. Dort werden alle notwendigen Dateien hinein kopiert )
 
 6. VS Code klont nun das Repository in den ausgewählten Ordner und öffnet es anschließend.
 
@@ -153,25 +166,22 @@ Folgen Sie diesen Schritten, um das GitHub-Projekt mit der URL  [https://github.
 
 8. Nach erfolgreicher Authentifizierung sollte das Repository erfolgreich in VS Code geklont und geöffnet sein.
 
-9. Sie können nun mit dem Projekt arbeiten, Änderungen vornehmen, Commits erstellen und Branches verwalten - alles direkt in der VS Code-Benutzeroberfläche.
+### Nur für die Integration (für das VS Praktikum)
 
-### Nur für die Integration 
-
-10. Klicken Sie in der unteren linken Ecke des VS Code-Fensters auf den aktuellen Branch-Namen (standardmäßig `master`). Dadurch öffnet sich die Branch-Liste.
-
-11. Suchen Sie in der Branch-Liste nach dem Branch `(aus der Vorlesung)`. Wenn der Branch nicht in der Liste angezeigt wird, klicken Sie auf "Alle Branches abrufen", um die aktuelle Liste der Remote-Branches abzurufen.
+1. Klicken Sie in der unteren linken Ecke des VS Code-Fensters auf den aktuellen Branch-Namen (standardmäßig `main`). Dadurch öffnet sich die Branch-Liste.
+2. Suchen Sie in der Branch-Liste nach dem Branch `(aus der Vorlesung)`. Wenn der Branch nicht in der Liste angezeigt wird, klicken Sie auf "Alle Branches abrufen", um die aktuelle Liste der Remote-Branches abzurufen.
 
 ### Submodule initieren
 
-12. Öffnen Sie das Terminal in VS Code durch Klicken auf "Terminal" > "Neues Terminal" in der Menüleiste oder durch Drücken von `Strg+Shift+ö` (Windows/Linux) oder `Cmd+Shift+ö` (macOS).
+1. Öffnen Sie das Terminal in VS Code durch Klicken auf "Terminal" > "Neues Terminal" in der Menüleiste oder durch Drücken von `Strg+Shift+ö` (Windows/Linux) oder `Cmd+Shift+ö` (macOS).
 
-13. Um die Submodule zu initialisieren, führen Sie den folgenden Befehl im Terminal aus:
+2. Um die Submodule zu initialisieren, führen Sie den folgenden Befehl im Terminal aus:
     
 ``` git submodule init ```     
 
 Dieser Befehl initialisiert die Submodule und bereitet sie für die Verwendung vor.
 
-14. Um die Submodule rekursiv zu aktualisieren und sicherzustellen, dass sie auf dem neuesten Stand sind, führen Sie den folgenden Befehl aus:
+3. Um die Submodule rekursiv zu aktualisieren und sicherzustellen, dass sie auf dem neuesten Stand sind, führen Sie den folgenden Befehl aus:
    
 ``` git submodule update --recursive ```     
 
@@ -180,22 +190,50 @@ Dieser Befehl lädt den Inhalt der Submodule herunter und aktualisiert sie auf d
 Bitte warten Sie bis die Befehle abgeschlossen sind.    
 
 Wenn Sie in Zukunft die Submodule erneut aktualisieren möchten, führen Sie einfach den Befehl `git submodule update --recursive` im Terminal aus.   
-# Anleitung zur Verwendung von vcpkg-configuration und Aktivierung der Umgebung
 
-15. Das Projekt, beispielhaft "TestNewFont", ist in Visual Studio Code geöffnet     
-16. Klicken Sie im Explorer-Fenster von Visual Studio Code mit der rechten Maustaste auf die vcpkg-configuration.json-Datei.     
-17. Wählen Sie im Kontextmenü die Option "Activate Environment" aus.     
-    Visual Studio Code aktiviert nun die vcpkg-Umgebung basierend auf Ihrer Konfiguration. Dies kann beim ersten Mal einige Zeit in Anspruch nehmen, da die erforderlichen Pakete heruntergeladen und installiert werden. Nachdem die Aktivierung abgeschlossen ist, können Sie Ihr Projekt wie gewohnt erstellen und ausführen. Die benötigten Abhängigkeiten sollten nun korrekt aufgelöst werden.
+# Ein Projekt wählen, builden und auf das Board übertragen
+
+1. Um zu testen, ob alles richtig installiert ist, soll das Projekt "TestNewFont" genutzt werden. Dazu klicken Sie in der Aktivierungsleiste (linke Seite) auf das CMSIS Symbol. 
+2. In dem sich öffnenden CMSIS Fenster wird oben, über die "..." -> "Select active Solution from Workspace" und dann `Programs/TestNewFonts/TestNewFonts` gewählt.
+3. Anschließend über das gleiche Menue  "..." ->Refresh (reload packs, update RTE)
+4. Klicken Sie nun auf das Explorer Symbol (oben links) 
+5. Öffnen Sie das Kontextmenü (rechte Maustaste) von der Datei vcpkg-configuration.json. Wählen Sie zuerst "Update Tool registry" und anschließend "Reactivate Environment" (Das kaann eine gewisse Zeit dauern)
 
 Sie werden aufgefordert, eine MDK Community-Lizenz für die nicht-kommerzielle Nutzung zu aktivieren. Akzeptieren Sie diese Option, wenn Sie keine Lizenz haben und der nicht-kommerziellen Nutzung zustimmen. Wenn Sie eine kommerzielle Lizenz für Keil MDK installiert haben, lehnen Sie diese Option ab.     
 
 # Building
 
-18. Klicken Sie in der Aktivitätsleiste von Visual Studio Code auf das CMSIS-Symbol (das CMSIS-Logo), um die CMSIS-Ansicht zu öffnen.    
-19. Visual Studio Code aktiviert nun die ausgewählte CMSIS-Solution. Der Name der aktiven Solution wird in der Statusleiste angezeigt.
-20. Sie können nun durch Auswahl der Solution auch ein anderes Zielprojekt wählen, wenn vorhanden, wie beispielhaft TestNewFontAssembler
+1. Klicken Sie auf das CMSIS-Symbol
+2. Klicken Sie in dem CMSIS Menü auf den Hammer ("Build Solution") Das Projekt sollte nun ohne Fehler gebaut werden.
+3. Klicken Sie in dem CMSIS Menü auf das Pfeil (Load & Run) um das Projekt auf das Board zu übertragen und dort laufen zu lassen, oder auf den Käfer (Load & Debug) , um das Projekt auf das Board zu übertragen und dort das Programm im Einzelschritt Modus laufen zu lassen. 
 
-Das war's! Sie haben erfolgreich das GitHub-Projekt in Visual Studio Code ausgecheckt und können nun bequem daran arbeiten, ohne die Kommandozeile verwenden zu müssen.
+# Neues Projekt erstellen
+
+1. Öffnen Sie das Terminal in VS Code durch Klicken auf "Terminal" > "Neues Terminal" in der Menüleiste oder durch Drücken von `Strg+Shift+ö` (Windows/Linux) oder `Cmd+Shift+ö` (macOS).
+2. Gehen Sie mit Hilfe von cd (Change Direktorie) in den Ordner bin 
+(ITS-BRD-VSC/bin)
+3. Führen Sie den Befehl createNewProjectC.bat (Windows) / ./createNewProjectC.sh (macOS / Linux)  aus um ein neues c Projekt zu erzeugen. 
+Führen Sie den Befehlt createNewProjectASM.bat (Windows) / ./createNewProjectASM.sh (macOS/Linux) aus, um ein neues Assembler Projekt zu erzeugen. 
+Sie werden aufgefordert ein Projekt Name einzugeben. Der Name muss mit einem Großbuchstabe beginnen.
+Nun wird ein neues Projekt erstellt.
+
+4. Klicken Sie auf CMSIS 
+5. In dem sich öffnenden CMSIS Fenster wird oben, über die "..." -> "Select active Solution from Workspace" und dann `Programs/<Name des Projekt>/<Name des Projekt>` gewählt.
+6. Anschließend über das gleiche Menue  "..." ->Refresh (reload packs, update RTE)
+7. Klicken Sie nun auf das Explorer Symbol (oben links) 
+8. Öffnen Sie das Kontextmenü (rechte Maustaste) von der Datei vcpkg-configuration.json. Wählen Sie zuerst "Update Tool registry" und anschließend "Reactivate Environment" 
+9. Nun weiter mit dem Menü Punkt Building (siehe Anleitung weiter oben)
+
+
+# Neue C Module in vs Code integrieren
+
+1. Klicken Sie nun auf das Explorer Symbol (oben links) 
+2. Mit Hilfe der rechten Maustaste auf dem Ordner Src kann ein neues C-File erstellt wreden.
+3. Mit Hilfe der rechten Maustaste auf dem Ordner Inc kann ein neues h-File erstellt wreden.
+4. Öffnen Sie die Datei <Projekt Name>.cproject.yml
+5. Ganz unten in der Datei, in der group Program/User/Src muss das neue File mit hilfe von - file: <file name> hinzu gefügt werden.
+
+
 
 # Keil GUI
 
