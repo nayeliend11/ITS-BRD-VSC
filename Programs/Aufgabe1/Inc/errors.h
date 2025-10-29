@@ -8,6 +8,8 @@
 #define NUMBER_UNDERFLOW -4
 #define DIVISION_WITH_ZERO -5
 #define UNEXPECTED_INPUT -6
+#define STACK_INITILASITION_FAILED -7
+#define STACK_NOT_INITALISED -8
 
 void error_handler(int errorCode);
 
