@@ -8,6 +8,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "arithmetik.h"
 #include "display.h"
+#include "errors.h"
 #include"stack.h"
 #include "scanner.h"
 #include "stm32f4xx_hal.h"
@@ -35,7 +36,7 @@ int main(void) {
 	//}
 
 	initDisplay();
-	int val = 0;
+	int errorCode = 0;
 
 while(1){
 	T_token token = nextToken();
@@ -57,7 +58,7 @@ while(1){
 		divide();
 		break;
 
-		/*case 'p':
+		case 'p':
 		printTop();
 		break;
 
@@ -77,28 +78,22 @@ while(1){
 		swap();
 		break;
 
-		case 'n':
-		val = val *10 + token.val; //verschiebt zahl auf nächste Stelle xxxx1 -> xxx1x
-		intToString()
-		printStdout
-		break;
-
 		case ' ':
-		push(val);
+		push(token.val);
 		break;
 
 		case'U':
-		//fehlerbehanlung
+		errorCode = UNEXPECTED_INPUT;
 		break;
 
 		case'O':
-		//fehlerbehandlung
+		errorCode = NUMBER_OVERFLOW;
 		break;
-*/
-		//default: if(token.val<0){
-			//fehler
-		//} else {
+	}
 
+	if(errorCode != EOK){
+		error_handler(errorCode);
+		errorCode = EOK;
 	}
 
 }
