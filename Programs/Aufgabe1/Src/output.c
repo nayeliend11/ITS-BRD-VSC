@@ -1,6 +1,7 @@
 #include "output.h"
+#include "display.h"
+#include "stack.h"
 #include <stdbool.h>
-
 
 
 void  intToString(int val, char *output){
@@ -29,4 +30,16 @@ void  intToString(int val, char *output){
         output[j]= buffer [i-j-1]; // rückwärts reinschreiben 
     }
     output [j] = '\0';
+}
+
+int printTop(){
+if (isStackEmpty())
+{
+    /* fehlerbehandlung */
+}
+}
+int printStack(){
+    if(isStackEmpty()){
+        // fehlerbehandlung
+    }
 }
