@@ -185,7 +185,7 @@ project:
         - file: Inc/display.h
         - file: Inc/stack.h
         - file: Inc/arithmetik.h
-        - file: Inc/string.h
+        - file: Inc/output.h
 
     # Benutzerdefinierte Programmdateien
     - group: Program/User/Src
@@ -195,7 +195,7 @@ project:
         - file: Src/display.c
         - file: Src/arithmetik.c
         - file: Src/stack.c
-        - file: Src/string.c
+        - file: Src/output.c
 
   components:
     - component: ARM::CMSIS:CORE

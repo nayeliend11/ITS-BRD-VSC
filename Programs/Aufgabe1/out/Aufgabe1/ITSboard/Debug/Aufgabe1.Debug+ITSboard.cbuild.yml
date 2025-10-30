@@ -335,7 +335,7 @@ build:
           category: header
         - file: ../../../../Inc/arithmetik.h
           category: header
-        - file: ../../../../Inc/string.h
+        - file: ../../../../Inc/output.h
           category: header
     - group: Program/User/Src
       files:
@@ -349,7 +349,7 @@ build:
           category: sourceC
         - file: ../../../../Src/stack.c
           category: sourceC
-        - file: ../../../../Src/string.c
+        - file: ../../../../Src/output.c
           category: sourceC
   constructed-files:
     - file: ../../../../RTE/_Debug_ITSboard/RTE_Components.h
