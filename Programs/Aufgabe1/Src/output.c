@@ -1,6 +1,7 @@
 #include "output.h"
 #include "display.h"
 #include "stack.h"
+#include <limits.h>
 #include <stdbool.h>
 
 
@@ -13,7 +14,10 @@ void  intToString(int val, char *output){
     if(negative){
         val = -val;
     }
+    
+    // sonderfall einführen für INTMIN! 
 
+  
     do {
 
         buffer[i] = (val %10) + '0'; // modulo schreibt rückwärts
@@ -37,6 +41,9 @@ if (isStackEmpty())
 {
     /* fehlerbehandlung */
 }
+intToString();
+printStdout();
+
 }
 int printStack(){
     if(isStackEmpty()){
