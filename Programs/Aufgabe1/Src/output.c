@@ -3,7 +3,7 @@
 
 
 
-int  intToString(int val, char *output){
+void  intToString(int val, char *output){
 
     char buffer [16];
     int i= 0, j;
