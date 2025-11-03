@@ -4,6 +4,7 @@
 
 #include "errors.h"
 #include <stdbool.h>
+//#include "stdlib.h"
 
 struct stack{
     int size;
@@ -11,7 +12,7 @@ struct stack{
     int *arr;
 }typedef Stack;
 
-int initStack(int size);
+int initStack();
 void deleteStack();
 int push(int val);
 int pop(int* val);

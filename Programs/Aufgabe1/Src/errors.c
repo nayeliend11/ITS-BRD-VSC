@@ -1,10 +1,10 @@
 #include "errors.h"
 #include "display.h"
-#include <stdlib.h>
+//#include <stdlib.h>
 
 #define LEN_ERR_MSG 256
 
-void error_handler(int errorCode){
+int error_handler(int errorCode){
     char *errorMsg;
     setErrMode();
     switch (errorCode) {
@@ -25,10 +25,11 @@ void error_handler(int errorCode){
         case STACK_NOT_INITALISED:
             errorMsg = "Stack wurde nicht initialisiert. Das Programm wird beendet";
             printStdout(errorMsg);
-            exit(errorCode);
+            return EXIT;
             break;
         default:
             errorMsg = "Unbekannter errorCode. Das Programm wird beendet";
+            return EXIT;
     }
-    return;
+    return EOK;
 }
