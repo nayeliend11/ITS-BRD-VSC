@@ -1,96 +1,110 @@
 #include "stack.h"
 #include "errors.h"
+#include "token.h"
 #include <stdbool.h>
 #include <stdlib.h>
 
 #define EMPTY_STACK -1
 
-static Stack stack;
 
-int initStack(int size){
-    stack.size = size;
-    stack.top = EMPTY_STACK;
-    stack.arr = (int*) calloc(size, sizeof(int));
-    if(stack.arr == NULL) return STACK_INITILASITION_FAILED;
-    return EOK;
+
+void deleteStack(Stack *self){
+    free(self->arr);
+    self->arr = NULL;
+    self->push = NULL;
+    self->pop = NULL;
+    self->peak = NULL;
+    self->clear = NULL;
+    self->duplicate = NULL;
+    self->swap = NULL;
+    self->delete = NULL;
+    self->isEmpty = NULL;
+    self->isFull = NULL;
+    free(self);
+    return;
 }
 
-void deleteStack(){
-    free(stack.arr);
-    stack.arr = NULL;
-    stack.size = 0;
-    stack.top = 0;
-}
-
-bool isStackEmpty(){
-    if(stack.top == EMPTY_STACK) return true;
+bool isStackEmpty(Stack *self){
+    if(self->top == EMPTY_STACK) return true;
     return false;
 }
 
-bool isStackFull(){
-    if(stack.top == stack.size - 1) return true;
+bool isStackFull(Stack *self){
+    if(self->top == self->size - 1) return true;
     return false;
 }
 
-int push(int val){
-    if(stack.arr == NULL) return STACK_NOT_INITALISED;
-    if(isStackFull()) return STACK_OVERFLOW;
-    stack.top++;
-    stack.arr[stack.top] = val;
+int push(Stack *self, int val){
+    if(self->arr == NULL) return STACK_NOT_INITALISED;
+    if(self->isFull(self)) return STACK_OVERFLOW;
+    self->top++;
+    self->arr[self->top] = val;
     return EOK;
 }
 
-int pop(int *val){
-    if(stack.arr == NULL) return STACK_NOT_INITALISED;
-    if(isStackEmpty()) return STACK_UNDERFLOW;
-    *val = stack.arr[stack.top];
-    stack.top--;
+int pop(Stack *self, int *val){
+    if(self->arr == NULL) return STACK_NOT_INITALISED;
+    if(self->isEmpty(self)) return STACK_UNDERFLOW;
+    *val = self->arr[self->top];
+    self->top--;
     return EOK;
 }
 
-int peak(int index, int* val){
-    if(stack.arr == NULL) return STACK_NOT_INITALISED;
-    if(isStackEmpty()) return STACK_UNDERFLOW;
-    *val = stack.arr[index];
+int peak(Stack *self, int index, int* val){
+    if(self->arr == NULL) return STACK_NOT_INITALISED;
+    if(self->isEmpty(self)) return STACK_UNDERFLOW;
+    *val = self->arr[index];
     return EOK;
 }
 
-int clearStack(){
-    if(stack.arr == NULL) return STACK_NOT_INITALISED;
-    int stack_size = stack.size;
-    int errorcode = 0;
-    deleteStack();
-    errorcode = initStack(stack_size);
-    if (errorcode != EOK) return errorcode;
+int clearStack(Stack *self){
+    if(self->arr == NULL) return STACK_NOT_INITALISED;
+    self->top = EMPTY_STACK;
     return EOK;
 }
 
-int duplicate(){
-    if(stack.arr == NULL) return STACK_NOT_INITALISED;
+int duplicate(Stack *self){
+    if(self->arr == NULL) return STACK_NOT_INITALISED;
     int errorCode = 0;
     int val = 0;
 
-    errorCode = peak(stack.top, &val);
+    errorCode = self->peak(self,self->top, &val);
     if(errorCode != EOK) return errorCode;
-    errorCode = push(val);
-    if(errorCode != NULL) return errorCode;
+    errorCode = self->push(self, val);
+    if(errorCode != EOK) return errorCode;
     return EOK;
 }
 
-int swap(){
+int swap(Stack *self){
     int firstElem = 0;
     int secondElem = 0;
     int errorCode = 0;
 
-    errorCode = pop(&firstElem);
+    errorCode = self->pop(self, &firstElem);
     if(errorCode != EOK) return errorCode;
-    errorCode = pop(&secondElem);
+    errorCode = self->pop(self, &secondElem);
     if(errorCode != EOK) return errorCode;
-    errorCode = push(firstElem);
+    errorCode = self->push(self, firstElem);
     if(errorCode != EOK) return errorCode;
-    errorCode = push(secondElem);
+    errorCode = self->push(self, secondElem);
     if(errorCode != EOK) return errorCode;
     return EOK;
 }
 
 
+int newStack(Stack* stack_ptr, int size){
+
+    stack_ptr->size = size;
+    stack_ptr->top = EMPTY_STACK;
+    stack_ptr->arr = (int*) calloc(size, sizeof(int));
+    stack_ptr->push = push;
+    stack_ptr->pop = pop;
+    stack_ptr->peak = peak;
+    stack_ptr->clear = clearStack;
+    stack_ptr->duplicate = duplicate;
+    stack_ptr->swap = swap;
+    stack_ptr->delete = deleteStack;
+
+    if(stack_ptr->arr == NULL) return STACK_INITILASITION_FAILED;
+    return EOK;
+}

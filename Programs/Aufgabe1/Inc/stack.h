@@ -5,23 +5,24 @@
 #include "errors.h"
 #include <stdbool.h>
 //#include "stdlib.h"
-
-struct stack{
+typedef struct Stack Stack;
+struct Stack{
+    //Variablen
     int size;
     int top;
     int *arr;
+    //Funktions-pointer
+    int (*push)(Stack *self, int val);
+    int (*pop)(Stack *self, int* val);
+    int (*peak)(Stack *self, int index, int *val);
+    int (*clear)(Stack *self);
+    int (*duplicate)(Stack *self);
+    int (*swap)(Stack *self);
+    void (*delete)(Stack *self);
+    bool (*isEmpty)(Stack *self);
+    bool (*isFull)(Stack *self);
 }typedef Stack;
 
-int initStack(int size);
-void deleteStack();
-int push(int val);
-int pop(int* val);
-bool isStackFull();
-bool isStackEmpty();
-int peak(int index, int *val);
-int clearStack();
-int duplicate();
-int swap();
-
+int newStack(Stack* stack_ptr, int size);
 #endif
 //eof
