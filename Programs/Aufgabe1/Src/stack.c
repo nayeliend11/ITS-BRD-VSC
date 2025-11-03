@@ -1,24 +1,22 @@
 #include "stack.h"
 #include "errors.h"
 #include <stdbool.h>
-
-#define NULL 0
+#include <stdlib.h>
 
 #define EMPTY_STACK -1
-#define STACK_SIZE 10
 
 static Stack stack;
-static int arr[STACK_SIZE];
 
-int initStack(){
-    stack.size = STACK_SIZE;
+int initStack(int size){
+    stack.size = size;
     stack.top = EMPTY_STACK;
-    stack.arr = arr;
-    if(stack.arr == NULL && stack.top != EMPTY_STACK && stack.size != STACK_SIZE) return STACK_INITILASITION_FAILED;
+    stack.arr = (int*) calloc(size, sizeof(int));
+    if(stack.arr == NULL) return STACK_INITILASITION_FAILED;
     return EOK;
 }
 
 void deleteStack(){
+    free(stack.arr);
     stack.arr = NULL;
     stack.size = 0;
     stack.top = 0;
@@ -62,7 +60,7 @@ int clearStack(){
     int stack_size = stack.size;
     int errorcode = 0;
     deleteStack();
-    errorcode = initStack();
+    errorcode = initStack(stack_size);
     if (errorcode != EOK) return errorcode;
     return EOK;
 }

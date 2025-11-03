@@ -12,7 +12,7 @@ struct stack{
     int *arr;
 }typedef Stack;
 
-int initStack();
+int initStack(int size);
 void deleteStack();
 int push(int val);
 int pop(int* val);
