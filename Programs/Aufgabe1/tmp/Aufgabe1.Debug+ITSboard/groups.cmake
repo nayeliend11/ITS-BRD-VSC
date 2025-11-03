@@ -210,7 +210,7 @@ add_library(Group_Program_User_Src OBJECT
   "${SOLUTION_ROOT}/Src/display.c"
   "${SOLUTION_ROOT}/Src/arithmetik.c"
   "${SOLUTION_ROOT}/Src/stack.c"
-  "${SOLUTION_ROOT}/Src/string.c"
+  "${SOLUTION_ROOT}/Src/output.c"
 )
 target_include_directories(Group_Program_User_Src PUBLIC
   $<TARGET_PROPERTY:${CONTEXT},INTERFACE_INCLUDE_DIRECTORIES>
