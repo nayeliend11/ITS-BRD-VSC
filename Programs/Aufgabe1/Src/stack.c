@@ -19,7 +19,6 @@ int deleteStack(Stack *self){
     self->duplicate = NULL;
     self->swap = NULL;
     self->delete = NULL;
-    free(self);
     return EOK;
 }
 
@@ -106,6 +105,9 @@ int swap(Stack *self){
 
 
 int newStack(Stack* stack_ptr, int size){
+
+    if (stack_ptr == NULL) return NO_STACK;
+    if(size <= 0) return STACK_SIZE_INVALID;
 
     stack_ptr->size = size;
     stack_ptr->top = EMPTY_STACK;

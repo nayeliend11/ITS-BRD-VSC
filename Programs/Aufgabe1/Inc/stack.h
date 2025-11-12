@@ -115,6 +115,17 @@ struct Stack{
     int (*delete)(Stack *self);
 }typedef Stack;
 
+    /*
+    * @Brief
+    * Initialisiert den Stack mit allen Pointern und allokiert speicher für das Array
+    * @Param
+    * stack_ptr: Pointer auf den Stack der die Funktion aufruft
+    * size: Maximal größe des Stacks
+    * @Return
+    * EOK wird Ausgegeben, wenn keine Fehler aufgetreten sind
+    * NO_STACK wird Ausgegeben, wenn ein NULL Pointer für den Stack übergeben wurde
+    * STACK_SIZE_INVALID wird Ausgegeben, wenn die maximal Größe des Stacks <= 0 ist
+    */
 int newStack(Stack* stack_ptr, int size);
 #endif
 //eof

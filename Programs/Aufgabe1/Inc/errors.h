@@ -14,6 +14,7 @@
 #define NO_STACK -10
 #define NO_VALUE -11
 #define INDEX_OUT_OF_BOUND -12
+#define STACK_SIZE_INVALID -13
 
 int error_handler(int errorCode);
 
