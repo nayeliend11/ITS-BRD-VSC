@@ -21,6 +21,7 @@
 #include "lcd.h"
 #include "fontsFLASH.h"
 #include "additionalFonts.h"
+#include <stdlib.h>
 
 
 #define STACK_SIZE 10
@@ -99,8 +100,17 @@ while(1){
 	}
 
 	if(errorCode != EOK){
-		error_handler(errorCode);
-		errorCode = EOK;
+		errorCode = error_handler(errorCode);
+		if(errorCode != EOK){
+			int exitCode = errorCode;
+			errorCode = EOK;
+			printStdout("Programm wird beendet...\n");
+			errorCode = stack.delete(&stack);
+			if(errorCode != EOK){
+				error_handler(errorCode);
+			}
+			exit(exitCode);
+		}
 	}
 
 }
