@@ -38,7 +38,7 @@ int error_handler(int errorCode){
             printStdout(errorMsg);
             return EXIT;
             break;
-        case STACK_NOT_INITALISED:
+        case STACK_NO_ARRAY:
             errorMsg = "Stack wurde nicht initialisiert!\n Das Programm wird beendet!\n";
             printStdout(errorMsg);
             return EXIT;

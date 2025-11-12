@@ -8,7 +8,8 @@
 
 
 
-void deleteStack(Stack *self){
+int deleteStack(Stack *self){
+    if(self == NULL)return NO_STACK;
     free(self->arr);
     self->arr = NULL;
     self->push = NULL;
@@ -18,10 +19,8 @@ void deleteStack(Stack *self){
     self->duplicate = NULL;
     self->swap = NULL;
     self->delete = NULL;
-    self->isEmpty = NULL;
-    self->isFull = NULL;
     free(self);
-    return;
+    return EOK;
 }
 
 bool isStackEmpty(Stack *self){
@@ -35,36 +34,44 @@ bool isStackFull(Stack *self){
 }
 
 int push(Stack *self, int val){
-    if(self->arr == NULL) return STACK_NOT_INITALISED;
-    if(self->isFull(self)) return STACK_OVERFLOW;
+    if(self == NULL) return  NO_STACK;
+    if(val == NULL) return NO_VALUE;
+    if(self->arr == NULL) return STACK_NO_ARRAY;
+    if(isStackFull(self)) return STACK_OVERFLOW;
     self->top++;
     self->arr[self->top] = val;
     return EOK;
 }
 
 int pop(Stack *self, int *val){
-    if(self->arr == NULL) return STACK_NOT_INITALISED;
-    if(self->isEmpty(self)) return STACK_UNDERFLOW;
+    if(self == NULL) return  NO_STACK;
+    if(val == NULL) return NO_VALUE;
+    if(self->arr == NULL) return STACK_NO_ARRAY;
+    if(isStackEmpty(self)) return STACK_UNDERFLOW;
     *val = self->arr[self->top];
     self->top--;
     return EOK;
 }
 
 int peak(Stack *self, int index, int* val){
-    if(self->arr == NULL) return STACK_NOT_INITALISED;
-    if(self->isEmpty(self)) return STACK_UNDERFLOW;
+    if(self == NULL) return  NO_STACK;
+    if(val == NULL) return NO_VALUE;
+    if(self->arr == NULL) return STACK_NO_ARRAY;
+    if(isStackEmpty(self)) return STACK_UNDERFLOW;
+    if(index > self->top || index < 0) return INDEX_OUT_OF_BOUND;
     *val = self->arr[index];
     return EOK;
 }
 
 int clearStack(Stack *self){
-    if(self->arr == NULL) return STACK_NOT_INITALISED;
+    if(self == NULL) return  NO_STACK;
+    if(self->arr == NULL) return STACK_NO_ARRAY;
     self->top = EMPTY_STACK;
     return EOK;
 }
 
 int duplicate(Stack *self){
-    if(self->arr == NULL) return STACK_NOT_INITALISED;
+    if(self == NULL) return  NO_STACK;
     int errorCode = 0;
     int val = 0;
 
@@ -76,6 +83,7 @@ int duplicate(Stack *self){
 }
 
 int swap(Stack *self){
+    if(self == NULL) return  NO_STACK;
     int firstElem = 0;
     int secondElem = 0;
     int errorCode = 0;
@@ -83,7 +91,12 @@ int swap(Stack *self){
     errorCode = self->pop(self, &firstElem);
     if(errorCode != EOK) return errorCode;
     errorCode = self->pop(self, &secondElem);
-    if(errorCode != EOK) return errorCode;
+    if(errorCode != EOK){
+        if(errorCode == STACK_UNDERFLOW){
+            self->push(self,firstElem);
+        }
+        return errorCode;
+    }
     errorCode = self->push(self, firstElem);
     if(errorCode != EOK) return errorCode;
     errorCode = self->push(self, secondElem);
