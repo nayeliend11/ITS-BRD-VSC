@@ -36,8 +36,8 @@ void  intToString(int val, char *output){
     output [j] = '\0';
 }
 
-int printTop(){
-if (isStackEmpty())
+int printTop(Stack *stack){
+if (stack->isEmpty(stack))
 {
     /* fehlerbehandlung */
 }
@@ -45,8 +45,8 @@ intToString();
 printStdout();
 
 }
-int printStack(){
-    if(isStackEmpty()){
+int printStack(Stack *stack){
+    if(stack->isEmpty(stack)){
         // fehlerbehandlung
     }
 }
