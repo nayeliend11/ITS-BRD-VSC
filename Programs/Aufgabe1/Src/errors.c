@@ -7,46 +7,51 @@
 
 int error_handler(int errorCode){
     char *errorMsg;
+    int returnVal = EOK;
     setErrMode();
     switch (errorCode) {
         case STACK_OVERFLOW:
             errorMsg = "Es fand ein Stack Overflow statt!\n";
-            printStdout(errorMsg);
             break;
         case STACK_UNDERFLOW:
             errorMsg = "Es fand ein Stack Underflow statt!\n";
-            printStdout(errorMsg);
             break;
         case NUMBER_OVERFLOW:
             errorMsg = "Es fand ein Arithmetischer Overflow statt!\n";
-            printStdout(errorMsg);
             break;
         case NUMBER_UNDERFLOW:
             errorMsg = "Es fand ein Arithmetischer Underflow statt!\n";
-            printStdout(errorMsg);
             break;
         case DIVISION_WITH_ZERO:
             errorMsg = "Es wurde versucht durch Null zu teilen!\n";
-            printStdout(errorMsg);
             break;
         case UNEXPECTED_INPUT:
             errorMsg = "Ein unerwartetes Signal ist eingegangen!\n";
-            printStdout(errorMsg);
             break;
         case STACK_INITILASITION_FAILED:
-            errorMsg = "Stack konnte nicht initialisiert werden!\n Das Programm wird beendet!\n";
-            printStdout(errorMsg);
-            return EXIT;
+            errorMsg = "Stack konnte nicht initialisiert werden!\n";
             break;
-        case STACK_NOT_INITALISED:
-            errorMsg = "Stack wurde nicht initialisiert!\n Das Programm wird beendet!\n";
-            printStdout(errorMsg);
-            return EXIT;
+        case STACK_NO_ARRAY:
+            errorMsg = "Stack Array wurde nicht gefunden!\n";
+            break;
+        case NO_STACK:
+            errorMsg = "Stack wurde nicht initialisiert!\n";
+            break;
+        case NO_VALUE:
+            errorMsg = "Ein Wert wurde nicht gefunden!\n";
+            break;
+        case INDEX_OUT_OF_BOUND:
+            errorMsg = "Index ist außerhalb des zulässigen Zugriffsbereichs!\n";
+            break;
+        case STACK_SIZE_INVALID:
+            errorMsg = "Die gewählte maximale Stack göße ist ungültig\n";
             break;
         default:
-            errorMsg = "Unbekannter errorCode!\n Das Programm wird beendet!\n";
-            return EXIT;
+            errorMsg = "Unbekannter errorCode!\n";
+            returnVal = errorCode;
+            break;
     }
+    printStdout(errorMsg);
     while(true){
         T_token input = nextToken();
         if(input.tok == 'C'){
@@ -54,5 +59,5 @@ int error_handler(int errorCode){
             break;
         }
     }
-    return EOK;
+    return returnVal;
 }

@@ -2,53 +2,53 @@
 #include "stack.h"
 #include <limits.h>
 
-void plus(){
+void plus(Stack *stack){
     int a, b;
-    pop(&a);
-    pop(&b);
+    stack->pop(stack, &a);
+    stack->pop(stack, &b);
     long sum = a+b;
     if(sum > INT_MAX ||sum < INT_MIN)
 {
     //fehlerbehandlung
-}    push(sum);
+}    stack->push(stack, sum);
 }
 
-void minus(){
+void minus(Stack *stack){
     int a,b;
-    pop(&a);
-    pop(&b);
+    stack->pop(stack, &a);
+    stack->pop(stack, &b);
     long sum = b-a;
     if(sum > INT_MAX ||sum < INT_MIN){
         //fehlerbehandlung
     }
-    push (sum); 
+    stack->push (stack, sum); 
 
 }
 
-void multiply(){
+void multiply(Stack *stack){
     int a,b;
-    pop(&a);
-    pop(&b);
+    stack->pop(stack, &a);
+    stack->pop(stack, &b);
     long sum = a*b;
     if(a == 0||b == 0){
-        push(0);
+        stack->push(stack, 0);
     } else if  (sum > INT_MAX ||sum < INT_MIN) {
      //fehlerbehandlung
     } else {
-    push(sum);
+    stack->push(stack, sum);
     }
     
 }
 
-void divide(){
+void divide(Stack *stack){
     int a,b;
-    pop(&a);
-    pop(&b);
+    stack->pop(stack, &a);
+    stack->pop(stack, &b);
 
      if(a == 0||b == 0){
         //fehlerbehandlung;
      } else {
-       push (a/b);
+       stack->push (stack, a/b);
      }
     
 }

@@ -12,6 +12,9 @@
 #include "output.h"
 #include "stack.h"
 #include "scanner.h"
+#include "error.h"
+#include "output.h"
+
 #include "stm32f4xx_hal.h"
 #include "init.h"
 #include "LCD_GUI.h"
@@ -19,8 +22,10 @@
 #include "lcd.h"
 #include "fontsFLASH.h"
 #include "additionalFonts.h"
-#include "error.h"
+#include <stdlib.h>
 
+
+#define STACK_SIZE 10
 
 int main(void) {
 	initITSboard();    // Initialisierung des ITS Boards
@@ -39,48 +44,51 @@ int main(void) {
 	initDisplay();
 	int errorCode = 0;
 
+	Stack stack; 
+	errorCode = newStack(&stack, STACK_SIZE);
+
 while(1){
 	T_token token = nextToken();
 	switch(token.tok){
 
 		case '+':
-		plus();
+		errorCode = plus(&stack);
 		break;
 
 		case '-':
-		minus();
+		errorCode = minus(&stack);
 		break; 
 
 		case '*':
-		multiply();
+		errorCode = multiply(&stack);
 		break;
 
 		case '/':
-		divide();
+		errorCode = divide(&stack);
 		break;
 
 		case 'p':
-		printTop();
+		errorCode = printTop(&stack);
 		break;
 
 		case 'P':
-		printStack();
+		errorCode = printStack(&stack);
 		break;
 
 		case'C':
-		clearStack();
+		errorCode = stack.clear(&stack);
 		break;
 
 		case'd':
-		duplicateTop();
+		errorCode = stack.duplicate(&stack);
 		break;
 
 		case'r':
-		swap();
+		errorCode = stack.swap(&stack);
 		break;
 
 		case ' ':
-		push(token.val);
+		errorCode = stack.push(&stack, token.val);
 		break;
 
 		case'U':
@@ -93,8 +101,17 @@ while(1){
 	}
 
 	if(errorCode != EOK){
-		error_handler(errorCode);
-		errorCode = EOK;
+		errorCode = error_handler(errorCode);
+		if(errorCode != EOK){
+			int exitCode = errorCode;
+			errorCode = EOK;
+			printStdout("Programm wird beendet...\n");
+			errorCode = stack.delete(&stack);
+			if(errorCode != EOK){
+				error_handler(errorCode);
+			}
+			exit(exitCode);
+		}
 	}
 
 }
