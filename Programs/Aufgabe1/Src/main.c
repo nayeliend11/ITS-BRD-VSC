@@ -9,7 +9,8 @@
 #include "arithmetik.h"
 #include "display.h"
 #include "errors.h"
-#include"stack.h"
+#include "output.h"
+#include "stack.h"
 #include "scanner.h"
 #include "stm32f4xx_hal.h"
 #include "init.h"
@@ -63,7 +64,7 @@ while(1){
 		break;
 
 		case 'P':
-		printAll();
+		printStack();
 		break;
 
 		case'C':

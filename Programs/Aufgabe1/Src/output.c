@@ -2,6 +2,7 @@
 #include "display.h"
 #include "stack.h"
 #include <limits.h>
+#include <stdio.h>
 #include <stdbool.h>
 
 
@@ -9,6 +10,7 @@ void  intToString(int val, char *output){
 
     char buffer [16];
     int i= 0, j;
+    int top = -1;
     bool negative = (val < 0);
 
     if(negative){
@@ -36,17 +38,32 @@ void  intToString(int val, char *output){
     output [j] = '\0';
 }
 
-int printTop(){
-if (isStackEmpty())
-{
+int printTop(Stack *stack){
+//if (isStackEmpty())
+//{
     /* fehlerbehandlung */
-}
-intToString();
-printStdout();
+//}
+    char buffer[16]= {0};
+    int value = 0;
+    intToString(value, buffer);
+    printStdout(buffer);
 
 }
-int printStack(){
-    if(isStackEmpty()){
+int printStack(Stack *stack){
+    //if(isStackEmpty()){
         // fehlerbehandlung
+   // }
+    char buffer[16]= {0};
+    int i = 0;
+
+    for (i = stack ->top; i>= 0; i--)
+    {
+        int value = stack ->arr[i];
+
+        intToString(value, buffer);
+
+        printStdout(buffer);
+
     }
+
 }
