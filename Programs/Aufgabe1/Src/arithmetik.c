@@ -2,7 +2,7 @@
 #include "stack.h"
 #include <limits.h>
 
-void plus(Stack *stack){
+int plus(Stack *stack){
     int a, b;
     stack->pop(stack, &a);
     stack->pop(stack, &b);
@@ -13,7 +13,7 @@ void plus(Stack *stack){
 }    stack->push(stack, sum);
 }
 
-void minus(Stack *stack){
+int minus(Stack *stack){
     int a,b;
     stack->pop(stack, &a);
     stack->pop(stack, &b);
@@ -25,7 +25,7 @@ void minus(Stack *stack){
 
 }
 
-void multiply(Stack *stack){
+int multiply(Stack *stack){
     int a,b;
     stack->pop(stack, &a);
     stack->pop(stack, &b);
@@ -40,7 +40,7 @@ void multiply(Stack *stack){
     
 }
 
-void divide(Stack *stack){
+int divide(Stack *stack){
     int a,b;
     stack->pop(stack, &a);
     stack->pop(stack, &b);

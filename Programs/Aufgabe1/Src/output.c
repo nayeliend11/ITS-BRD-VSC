@@ -49,8 +49,8 @@ int printTop(Stack *stack){
     printStdout(buffer);
 
 }
-int printStack(){
-    if(isStackEmpty()){
+int printStack(Stack *stack){
+    //if(isStackEmpty()){
         // fehlerbehandlung
    // }
     char buffer[16]= {0};

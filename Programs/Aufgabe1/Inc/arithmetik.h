@@ -3,10 +3,10 @@
 
 #include "stack.h"
 
-void plus(Stack *stack);
-void minus(Stack *stack);  //subtrahiert 1.(oberen) Wert vom 2.
-void multiply(Stack *stack); 
-void divide(Stack *stack); //teilt den 2. Wert durch den 1.
+int plus(Stack *stack);
+int minus(Stack *stack);  //subtrahiert 1.(oberen) Wert vom 2.
+int multiply(Stack *stack); 
+int divide(Stack *stack); //teilt den 2. Wert durch den 1.
 
 
 
