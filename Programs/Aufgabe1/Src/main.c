@@ -110,12 +110,12 @@ while(1){
 			if(errorCode != EOK){
 				error_handler(errorCode);
 			}
-			exit(exitCode);
+			return -1;
 		}
 	}
 
 }
-
+return 0;
 }
 
 
