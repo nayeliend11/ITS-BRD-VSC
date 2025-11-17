@@ -186,6 +186,8 @@ project:
         - file: Inc/stack.h
         - file: Inc/arithmetik.h
         - file: Inc/output.h
+        - file: Inc/errors.h
+        - file: Inc/main.h
 
     # Benutzerdefinierte Programmdateien
     - group: Program/User/Src
@@ -196,6 +198,7 @@ project:
         - file: Src/arithmetik.c
         - file: Src/stack.c
         - file: Src/output.c
+        - file: Src/errors.c
 
   components:
     - component: ARM::CMSIS:CORE

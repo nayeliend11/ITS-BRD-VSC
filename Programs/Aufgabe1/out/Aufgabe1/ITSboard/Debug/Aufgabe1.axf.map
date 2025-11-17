@@ -1422,12 +1422,9 @@ Section Cross References
     main.o(.text.main) refers to display.o(.text.initDisplay) for initDisplay
     main.o(.text.main) refers to stack.o(.text.newStack) for newStack
     main.o(.text.main) refers to scanner.o(.text.nextToken) for nextToken
-    main.o(.text.main) refers to arithmetik.o(.text.plus) for plus
-    main.o(.text.main) refers to arithmetik.o(.text.minus) for minus
-    main.o(.text.main) refers to arithmetik.o(.text.multiply) for multiply
-    main.o(.text.main) refers to arithmetik.o(.text.divide) for divide
     main.o(.text.main) refers to output.o(.text.printTop) for printTop
     main.o(.text.main) refers to output.o(.text.printStack) for printStack
+    main.o(.text.main) refers to errors.o(.text.error_handler) for error_handler
     main.o(.text.main) refers to main.o(.rodata.str1.1) for .L.str
     main.o(.text.main) refers to display.o(.text.printStdout) for printStdout
     main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
@@ -1504,6 +1501,11 @@ Section Cross References
     output.o(.text.printStack) refers to output.o(.text.intToString) for intToString
     output.o(.text.printStack) refers to display.o(.text.printStdout) for printStdout
     output.o(.ARM.exidx.text.printStack) refers to output.o(.text.printStack) for [Anonymous Symbol]
+    errors.o(.text.error_handler) refers to display.o(.text.setErrMode) for setErrMode
+    errors.o(.text.error_handler) refers to errors.o(.rodata.str1.1) for .L.str
+    errors.o(.text.error_handler) refers to display.o(.text.printStdout) for printStdout
+    errors.o(.text.error_handler) refers to scanner.o(.text.nextToken) for nextToken
+    errors.o(.ARM.exidx.text.error_handler) refers to errors.o(.text.error_handler) for [Anonymous Symbol]
     sqrt.o(i.__hardfp_sqrt) refers (Special) to iusefp.o(.text) for __I$use$fp
     sqrt.o(i.__hardfp_sqrt) refers to dsqrt.o(.text) for _dsqrt
     sqrt.o(i.__hardfp_sqrt) refers to errno.o(i.__set_errno) for __set_errno
@@ -2624,7 +2626,7 @@ Removing Unused input sections from the image.
     Removing LCD_Demos.o(.ARM.exidx.text.TP_Dialog), (8 bytes).
     Removing LCD_Demos.o(.text.TP_DrawBoard), (514 bytes).
     Removing LCD_Demos.o(.ARM.exidx.text.TP_DrawBoard), (8 bytes).
-    Removing LCD_Demos.o(.rodata.str1.1), (119 bytes).
+    Removing LCD_Demos.o(.rodata.str1.1), (124 bytes).
     Removing LCD_Demos.o(.rodata.cst4), (4 bytes).
     Removing LCD_Demos.o(.data.TP_DrawBoard.brushColor), (2 bytes).
     Removing error.o(.text), (0 bytes).
@@ -2654,7 +2656,6 @@ Removing Unused input sections from the image.
     Removing terminal.o(.text), (0 bytes).
     Removing terminal.o(.ARM.exidx.text.genTerm), (8 bytes).
     Removing terminal.o(.ARM.exidx.text.clearTerm), (8 bytes).
-    Removing terminal.o(.text.setTextColorTerm), (20 bytes).
     Removing terminal.o(.ARM.exidx.text.setTextColorTerm), (8 bytes).
     Removing terminal.o(.text.setPosTerm), (80 bytes).
     Removing terminal.o(.ARM.exidx.text.setPosTerm), (8 bytes).
@@ -2736,16 +2737,19 @@ Removing Unused input sections from the image.
     Removing display.o(.ARM.exidx.text.printStdout), (8 bytes).
     Removing display.o(.ARM.exidx.text.initDisplay), (8 bytes).
     Removing display.o(.ARM.exidx.text.printToEchoLine), (8 bytes).
-    Removing display.o(.text.setErrMode), (32 bytes).
     Removing display.o(.ARM.exidx.text.setErrMode), (8 bytes).
     Removing display.o(.text.setNormalMode), (30 bytes).
     Removing display.o(.ARM.exidx.text.setNormalMode), (8 bytes).
     Removing display.o(.text.isBottomLine), (46 bytes).
     Removing display.o(.ARM.exidx.text.isBottomLine), (8 bytes).
     Removing arithmetik.o(.text), (0 bytes).
+    Removing arithmetik.o(.text.plus), (68 bytes).
     Removing arithmetik.o(.ARM.exidx.text.plus), (8 bytes).
+    Removing arithmetik.o(.text.minus), (68 bytes).
     Removing arithmetik.o(.ARM.exidx.text.minus), (8 bytes).
+    Removing arithmetik.o(.text.multiply), (94 bytes).
     Removing arithmetik.o(.ARM.exidx.text.multiply), (8 bytes).
+    Removing arithmetik.o(.text.divide), (58 bytes).
     Removing arithmetik.o(.ARM.exidx.text.divide), (8 bytes).
     Removing stack.o(.text), (0 bytes).
     Removing stack.o(.ARM.exidx.text.deleteStack), (8 bytes).
@@ -2762,6 +2766,8 @@ Removing Unused input sections from the image.
     Removing output.o(.ARM.exidx.text.intToString), (8 bytes).
     Removing output.o(.ARM.exidx.text.printTop), (8 bytes).
     Removing output.o(.ARM.exidx.text.printStack), (8 bytes).
+    Removing errors.o(.text), (0 bytes).
+    Removing errors.o(.ARM.exidx.text.error_handler), (8 bytes).
     Removing dfltui.o(.text), (26 bytes).
     Removing dfixi.o(.text), (62 bytes).
     Removing depilogue.o(.text), (186 bytes).
@@ -2772,4 +2778,4 @@ Removing Unused input sections from the image.
     Removing dfixul.o(.text), (48 bytes).
     Removing cdrcmple.o(.text), (48 bytes).
 
-1129 unused section(s) (total 780976 bytes) removed from the image.
+1133 unused section(s) (total 781225 bytes) removed from the image.
