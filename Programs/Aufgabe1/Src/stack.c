@@ -18,7 +18,7 @@ int deleteStack(Stack *self){
     self->clear = NULL;
     self->duplicate = NULL;
     self->swap = NULL;
-    self->delete = NULL;
+    self->deleteStack = NULL;
     return EOK;
 }
 
@@ -118,7 +118,7 @@ int newStack(Stack* stack_ptr, int size){
     stack_ptr->clear = clearStack;
     stack_ptr->duplicate = duplicate;
     stack_ptr->swap = swap;
-    stack_ptr->delete = deleteStack;
+    stack_ptr->deleteStack = deleteStack;
 
     if(stack_ptr->arr == NULL) return STACK_INITILASITION_FAILED;
     return EOK;

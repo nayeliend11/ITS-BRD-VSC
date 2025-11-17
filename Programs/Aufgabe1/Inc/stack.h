@@ -112,8 +112,8 @@ struct Stack{
     * EOK wird Ausgegeben, wenn keine Fehler aufgetreten sind
     * NO_STACK wird Ausgegeben, wenn ein NULL Pointer für den Stack übergeben wurde
     */
-    int (*delete)(Stack *self);
-}typedef Stack;
+    int (*deleteStack)(Stack *self);
+};
 
     /*
     * @Brief
