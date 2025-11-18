@@ -51,7 +51,6 @@
             "type": "shell",
             "command": "pyocd",
             "options": {
-<<<<<<< HEAD
                 "cwd": "${workspaceFolder}/Programs/Aufgabe1"
             },
             "windows": {
@@ -83,15 +82,6 @@
                             "-c"
                         ]
                     }
-=======
-                "cwd": "${workspaceFolder}/Programs/Aufgabe1",
-                "shell": {
-                    "executable": "cmd.exe",
-                    "args": [
-                        "/d",
-                        "/c"
-                    ]
->>>>>>> refs/remotes/origin/main
                 }
             },
             "args": [
@@ -109,7 +99,6 @@
             "type": "shell",
             "command": "pyocd",
             "options": {
-<<<<<<< HEAD
                 "cwd": "${workspaceFolder}/Programs/Aufgabe1"
             },
             "windows": {
@@ -141,15 +130,6 @@
                             "-c"
                         ]
                     }
-=======
-                "cwd": "${workspaceFolder}/Programs/Aufgabe1",
-                "shell": {
-                    "executable": "cmd.exe",
-                    "args": [
-                        "/d",
-                        "/c"
-                    ]
->>>>>>> refs/remotes/origin/main
                 }
             },
             "args": [
@@ -166,7 +146,6 @@
             "type": "shell",
             "command": "pyocd",
             "options": {
-<<<<<<< HEAD
                 "cwd": "${workspaceFolder}/Programs/Aufgabe1"
             },
             "windows": {
@@ -198,15 +177,6 @@
                             "-c"
                         ]
                     }
-=======
-                "cwd": "${workspaceFolder}/Programs/Aufgabe1",
-                "shell": {
-                    "executable": "cmd.exe",
-                    "args": [
-                        "/d",
-                        "/c"
-                    ]
->>>>>>> refs/remotes/origin/main
                 }
             },
             "args": [
@@ -239,7 +209,6 @@
             "type": "shell",
             "command": "pyocd",
             "options": {
-<<<<<<< HEAD
                 "cwd": "${workspaceFolder}/Programs/Aufgabe1"
             },
             "windows": {
@@ -271,15 +240,6 @@
                             "-c"
                         ]
                     }
-=======
-                "cwd": "${workspaceFolder}/Programs/Aufgabe1",
-                "shell": {
-                    "executable": "cmd.exe",
-                    "args": [
-                        "/d",
-                        "/c"
-                    ]
->>>>>>> refs/remotes/origin/main
                 }
             },
             "args": [

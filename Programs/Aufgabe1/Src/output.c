@@ -47,7 +47,7 @@ int printTop(Stack *stack){
     int value = 0;
     intToString(value, buffer);
     printStdout(buffer);
-
+    return EOK;
 }
 int printStack(Stack *stack){
     //if(isStackEmpty()){
@@ -65,5 +65,6 @@ int printStack(Stack *stack){
         printStdout(buffer);
 
     }
+    return EOK; 
 
 }

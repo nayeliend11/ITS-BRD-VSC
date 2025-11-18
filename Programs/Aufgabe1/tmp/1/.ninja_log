@@ -67,3 +67,12 @@
 2	3627	1763135142919509455	CMakeFiles/Group_Drivers_Board.dir/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/ITS_BRD_LIB/Src/startup/startup_stm32f429xx.o	168b4f9f63a3b8ab
 11	15441	1763135344380289779	CMakeFiles/Group_Program_User_Src.dir/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/Src/arithmetik.o	15f533fe8e8de92d
 10	15514	1763135344379454308	CMakeFiles/Group_Program_User_Src.dir/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/Src/main.o	c914c8612b29336f
+10	14462	1763213372662306083	CMakeFiles/Group_Program_User_Src.dir/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/Src/main.o	c914c8612b29336f
+9	16293	1763217784105312607	CMakeFiles/Group_Program_User_Src.dir/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/Src/main.o	c914c8612b29336f
+12	61	1763376491741004168	CMakeFiles/database	fcfd6782f4f1ccb3
+12	61	1763376491741004168	/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/tmp/1/CMakeFiles/database	fcfd6782f4f1ccb3
+8	11035	1763376507371676595	CMakeFiles/Group_Program_User_Src.dir/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/Src/main.o	c914c8612b29336f
+10	19963	1763471268417701749	CMakeFiles/Group_Program_User_Src.dir/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/Src/arithmetik.o	15f533fe8e8de92d
+10	20578	1763471268417313011	CMakeFiles/Group_Program_User_Src.dir/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/Src/main.o	c914c8612b29336f
+9	16223	1763472429743160964	CMakeFiles/Group_Program_User_Src.dir/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/Src/output.o	b419925dbfef2d42
+8	16245	1763472429742794686	CMakeFiles/Group_Program_User_Src.dir/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/Src/arithmetik.o	15f533fe8e8de92d
