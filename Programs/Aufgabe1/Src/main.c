@@ -52,19 +52,19 @@ while(1){
 	switch(token.tok){
 
 		case '+':
-		errorCode = plus(&stack);
+		//errorCode = plus(&stack);
 		break;
 
 		case '-':
-		errorCode = minus(&stack);
+		//errorCode = minus(&stack);
 		break; 
 
 		case '*':
-		errorCode = multiply(&stack);
+		//errorCode = multiply(&stack);
 		break;
 
 		case '/':
-		errorCode = divide(&stack);
+		//errorCode = divide(&stack);
 		break;
 
 		case 'p':
@@ -106,16 +106,16 @@ while(1){
 			int exitCode = errorCode;
 			errorCode = EOK;
 			printStdout("Programm wird beendet...\n");
-			errorCode = stack.delete(&stack);
+			errorCode = stack.deleteStack(&stack);
 			if(errorCode != EOK){
 				error_handler(errorCode);
 			}
-			exit(exitCode);
+			return -1;
 		}
 	}
 
 }
-
+return 0;
 }
 
 

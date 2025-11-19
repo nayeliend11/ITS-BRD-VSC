@@ -211,6 +211,7 @@ add_library(Group_Program_User_Src OBJECT
   "${SOLUTION_ROOT}/Src/arithmetik.c"
   "${SOLUTION_ROOT}/Src/stack.c"
   "${SOLUTION_ROOT}/Src/output.c"
+  "${SOLUTION_ROOT}/Src/errors.c"
 )
 target_include_directories(Group_Program_User_Src PUBLIC
   $<TARGET_PROPERTY:${CONTEXT},INTERFACE_INCLUDE_DIRECTORIES>
