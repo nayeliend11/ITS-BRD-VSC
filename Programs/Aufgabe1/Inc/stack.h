@@ -5,6 +5,8 @@
 #include "errors.h"
 #include <stdbool.h>
 
+#define EMPTY_STACK -1
+
 typedef struct Stack Stack;
 struct Stack{
     //Variablen

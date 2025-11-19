@@ -59,5 +59,6 @@ int error_handler(int errorCode){
             break;
         }
     }
+    setNormalMode();
     return returnVal;
 }

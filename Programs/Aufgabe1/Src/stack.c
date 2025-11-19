@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-#define EMPTY_STACK -1
+
 
 
 
@@ -34,7 +34,6 @@ bool isStackFull(Stack *self){
 
 int push(Stack *self, int val){
     if(self == NULL) return  NO_STACK;
-    if(val == NULL) return NO_VALUE;
     if(self->arr == NULL) return STACK_NO_ARRAY;
     if(isStackFull(self)) return STACK_OVERFLOW;
     self->top++;

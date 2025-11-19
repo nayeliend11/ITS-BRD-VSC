@@ -20,7 +20,7 @@ void  intToString(int val, char *output){
     if(val == INT_MIN){
     int last_digit = -(val%10);
     buffer [i++] = last_digit + '0';
-    temp_val = -(val/10);
+    val = val/10;
     negative = true;
     }
    if(negative){
@@ -41,6 +41,7 @@ void  intToString(int val, char *output){
     for (j = 0; j < i; j++) {
         output[j]= buffer [i-j-1]; // rückwärts reinschreiben 
     }
+    output [j++] = '\n';
     output [j] = '\0';
 }
 
@@ -50,6 +51,8 @@ int printTop(Stack *stack){
    }
     char buffer[16]= {0};
     int value = 0;
+    int errorcode = stack->peak(stack, stack->top, &value);
+    if(errorcode != EOK){return errorcode;}
     intToString(value, buffer);
     printStdout(buffer);
     return EOK;
@@ -60,16 +63,19 @@ int printStack(Stack *stack){
    }
     char buffer[16]= {0};
     int i = 0;
+    int value;
+    int errorCode;
 
-    for (i = stack ->top; i>= 0; i--)
-    {
-        int value = stack ->arr[i];
+    i = stack->top;
+    do {
+        errorCode = stack->peak(stack,i,&value);
+        if(errorCode != EOK)return errorCode;
 
         intToString(value, buffer);
 
         printStdout(buffer);
-
-    }
+        i--;
+    }while (i>0);
     return EOK; 
 
 }

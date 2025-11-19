@@ -4,9 +4,11 @@
 #include <limits.h>
 
 int plus(Stack *stack){
-    int a, b;
-    stack->pop(stack, &a);
-    stack->pop(stack, &b);
+    int a, b, errorCode;
+    errorCode = stack->pop(stack, &a);
+    if(errorCode != EOK)return errorCode;
+    errorCode = stack->pop(stack, &b);
+    if(errorCode != EOK)return errorCode;
     long sum = a+b;
     if(sum > INT_MAX )
 {
@@ -14,16 +16,19 @@ int plus(Stack *stack){
 }  if (sum < INT_MIN){
     return error_handler(NUMBER_UNDERFLOW);
 } else {
-stack->push(stack, sum);
+errorCode = stack->push(stack, sum);
+if(errorCode != EOK)return errorCode;
 }
 return EOK;
   
 }
 
 int minus(Stack *stack){
-    int a,b;
-    stack->pop(stack, &a);
-    stack->pop(stack, &b);
+    int a,b,errorCode;
+    errorCode = stack->pop(stack, &a);
+    if(errorCode != EOK)return errorCode;
+    errorCode = stack->pop(stack, &b);
+    if(errorCode != EOK)return errorCode;
     long sum = b-a;
       if(sum > INT_MAX )
 {
@@ -31,34 +36,37 @@ int minus(Stack *stack){
 }  if (sum < INT_MIN){
     return error_handler(NUMBER_UNDERFLOW);
 } else {
-    stack->push (stack, sum); 
+    errorCode = stack->push (stack, sum); 
+    if(errorCode != EOK)return errorCode;
 
 }
 return EOK;
 }
 
 int multiply(Stack *stack){
-    int a,b;
-    stack->pop(stack, &a);
-    stack->pop(stack, &b);
+    int a,b,errorCode;
+
+    errorCode = stack->pop(stack, &a);
+    if(errorCode != EOK) return errorCode;
+    errorCode = stack->pop(stack, &b);
+    if(errorCode != EOK) return errorCode;
+
     long sum = a*b;
-    if(a == 0||b == 0){
-        stack->push(stack, 0);
-    } else    if(sum > INT_MAX )
-{
-   return error_handler(NUMBER_OVERFLOW);
-}  if (sum < INT_MIN){
-    return error_handler(NUMBER_UNDERFLOW);
-} else {
-    stack->push(stack, sum);
+    
+    if(sum/b != a){
+        return NUMBER_OVERFLOW;
     }
+    errorCode = stack->push(stack,sum);
+    if(errorCode != EOK) return errorCode;
     return EOK;
 }
 
 int divide(Stack *stack){
-    int a,b;
-    stack->pop(stack, &a);
-    stack->pop(stack, &b);
+    int a,b, errorCode;
+    errorCode = stack->pop(stack, &b);
+    if(errorCode != EOK)return errorCode;
+    errorCode = stack->pop(stack, &a);
+    if(errorCode != EOK)return errorCode;
     long sum = a/b;
 
      if(a == 0||b == 0){
@@ -69,7 +77,8 @@ int divide(Stack *stack){
 }  if (sum < INT_MIN){
     return error_handler(NUMBER_UNDERFLOW);
 } else {
-       stack->push (stack, a/b);
+       errorCode = stack->push (stack, a/b);
+       if(errorCode != EOK)return errorCode;
      }
     return EOK;
 }

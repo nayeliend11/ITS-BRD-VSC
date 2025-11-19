@@ -49,22 +49,23 @@ int main(void) {
 
 while(1){
 	T_token token = nextToken();
+	clearStdout();
 	switch(token.tok){
 
 		case '+':
-		//errorCode = plus(&stack);
+		errorCode = plus(&stack);
 		break;
 
 		case '-':
-		//errorCode = minus(&stack);
+		errorCode = minus(&stack);
 		break; 
 
 		case '*':
-		//errorCode = multiply(&stack);
+		errorCode = multiply(&stack);
 		break;
 
 		case '/':
-		//errorCode = divide(&stack);
+		errorCode = divide(&stack);
 		break;
 
 		case 'p':
@@ -87,7 +88,7 @@ while(1){
 		errorCode = stack.swap(&stack);
 		break;
 
-		case ' ':
+		case 'n':
 		errorCode = stack.push(&stack, token.val);
 		break;
 
