@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/TestNewFont/tmp/TestNewFont.Debug+ITSboard"
-  "/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/TestNewFont/tmp/1"
-  "/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/TestNewFont/tmp/TestNewFont.Debug+ITSboard"
-  "/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/TestNewFont/tmp/TestNewFont.Debug+ITSboard/tmp"
-  "/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/TestNewFont/tmp/TestNewFont.Debug+ITSboard/src/TestNewFont.Debug+ITSboard-stamp"
-  "/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/TestNewFont/tmp/TestNewFont.Debug+ITSboard/src"
-  "/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/TestNewFont/tmp/TestNewFont.Debug+ITSboard/src/TestNewFont.Debug+ITSboard-stamp"
+  "C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/TestNewFont/tmp/TestNewFont.Debug+ITSboard"
+  "C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/TestNewFont/tmp/1"
+  "C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/TestNewFont/tmp/TestNewFont.Debug+ITSboard"
+  "C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/TestNewFont/tmp/TestNewFont.Debug+ITSboard/tmp"
+  "C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/TestNewFont/tmp/TestNewFont.Debug+ITSboard/src/TestNewFont.Debug+ITSboard-stamp"
+  "C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/TestNewFont/tmp/TestNewFont.Debug+ITSboard/src"
+  "C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/TestNewFont/tmp/TestNewFont.Debug+ITSboard/src/TestNewFont.Debug+ITSboard-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/TestNewFont/tmp/TestNewFont.Debug+ITSboard/src/TestNewFont.Debug+ITSboard-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/TestNewFont/tmp/TestNewFont.Debug+ITSboard/src/TestNewFont.Debug+ITSboard-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/TestNewFont/tmp/TestNewFont.Debug+ITSboard/src/TestNewFont.Debug+ITSboard-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/TestNewFont/tmp/TestNewFont.Debug+ITSboard/src/TestNewFont.Debug+ITSboard-stamp${cfgdir}") # cfgdir has leading slash
 endif()
