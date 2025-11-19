@@ -1,4 +1,5 @@
 # ninja log v6
+<<<<<<< HEAD
 4	412	1763135142921471111	CMakeFiles/Group_Drivers_STM32F4xx_HAL_Driver.dir/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/stm32cubef4/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o	546ae35906ba2f8
 4	77	7850973388227730	CMakeFiles/database	9b76f0f0de7c225c
 1984	2411	1763135144901901864	CMakeFiles/Group_ITS_BRD_LIB.dir/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/ITS_BRD_LIB/Src/init.o	ce491f4519ca62ef
@@ -155,3 +156,13 @@
 16	90	7852599230670896	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/1/CMakeFiles/database	9b76f0f0de7c225c
 5	68	7852599258897236	CMakeFiles/database	9b76f0f0de7c225c
 5	68	7852599258897236	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/1/CMakeFiles/database	9b76f0f0de7c225c
+=======
+2	18	1763556108206648243	CMakeFiles/database	fcfd6782f4f1ccb3
+2	18	1763556108206648243	/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/tmp/1/CMakeFiles/database	fcfd6782f4f1ccb3
+2	74	1763556338360928529	CMakeFiles/database	fcfd6782f4f1ccb3
+2	74	1763556338360928529	/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/tmp/1/CMakeFiles/database	fcfd6782f4f1ccb3
+1	17	1763556339056668272	CMakeFiles/database	fcfd6782f4f1ccb3
+1	17	1763556339056668272	/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/tmp/1/CMakeFiles/database	fcfd6782f4f1ccb3
+2	17	1763556339655910122	CMakeFiles/database	fcfd6782f4f1ccb3
+2	17	1763556339655910122	/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/tmp/1/CMakeFiles/database	fcfd6782f4f1ccb3
+>>>>>>> cb9f0994ea264ce5c7f395d4d7d4ed185dc86998
