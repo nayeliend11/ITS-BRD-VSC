@@ -1,9 +1,11 @@
 #include "output.h"
 #include "display.h"
+#include "errors.h"
 #include "stack.h"
 #include <limits.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 
 void  intToString(int val, char *output){
@@ -12,14 +14,18 @@ void  intToString(int val, char *output){
     int i= 0, j;
     int top = -1;
     bool negative = (val < 0);
-
-    if(negative){
+    int temp_val = val;
+  
+     // sonderfall einführen für INTMIN! 
+    if(val == INT_MIN){
+    int last_digit = -(val%10);
+    buffer [i++] = last_digit + '0';
+    temp_val = -(val/10);
+    negative = true;
+    }
+   if(negative){
         val = -val;
     }
-    
-    // sonderfall einführen für INTMIN! 
-
-  
     do {
 
         buffer[i] = (val %10) + '0'; // modulo schreibt rückwärts
@@ -39,10 +45,9 @@ void  intToString(int val, char *output){
 }
 
 int printTop(Stack *stack){
-//if (isStackEmpty())
-//{
-    /* fehlerbehandlung */
-//}
+ if(stack == NULL){
+       return error_handler(NO_STACK);
+   }
     char buffer[16]= {0};
     int value = 0;
     intToString(value, buffer);
@@ -50,9 +55,9 @@ int printTop(Stack *stack){
     return EOK;
 }
 int printStack(Stack *stack){
-    //if(isStackEmpty()){
-        // fehlerbehandlung
-   // }
+    if(stack == NULL){
+       return error_handler(NO_STACK);
+   }
     char buffer[16]= {0};
     int i = 0;
 
