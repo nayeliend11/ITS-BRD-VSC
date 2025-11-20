@@ -1,0 +1,15 @@
+# ninja log v6
+5	82	7853344828373265	Aufgabe_2.Debug+ITSboard/src/Aufgabe_2.Debug+ITSboard-stamp/Aufgabe_2.Debug+ITSboard-mkdir	2a3b154f472be776
+5	82	7853344828373265	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe_2/tmp/Aufgabe_2.Debug+ITSboard/src/Aufgabe_2.Debug+ITSboard-stamp/Aufgabe_2.Debug+ITSboard-mkdir	2a3b154f472be776
+83	139	7853344828959541	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe_2/tmp/Aufgabe_2.Debug+ITSboard/src/Aufgabe_2.Debug+ITSboard-stamp/Aufgabe_2.Debug+ITSboard-download	375b5c1fd78adfda
+83	139	7853344828959541	Aufgabe_2.Debug+ITSboard/src/Aufgabe_2.Debug+ITSboard-stamp/Aufgabe_2.Debug+ITSboard-download	375b5c1fd78adfda
+141	200	7853344829535245	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe_2/tmp/Aufgabe_2.Debug+ITSboard/src/Aufgabe_2.Debug+ITSboard-stamp/Aufgabe_2.Debug+ITSboard-update	f39e85b120242817
+200	259	7853344830160690	Aufgabe_2.Debug+ITSboard/src/Aufgabe_2.Debug+ITSboard-stamp/Aufgabe_2.Debug+ITSboard-patch	5ee6a2d485c33d63
+141	200	7853344829535245	Aufgabe_2.Debug+ITSboard/src/Aufgabe_2.Debug+ITSboard-stamp/Aufgabe_2.Debug+ITSboard-update	f39e85b120242817
+200	259	7853344830160690	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe_2/tmp/Aufgabe_2.Debug+ITSboard/src/Aufgabe_2.Debug+ITSboard-stamp/Aufgabe_2.Debug+ITSboard-patch	5ee6a2d485c33d63
+3	3132	7853347086891475	Aufgabe_2.Debug+ITSboard/src/Aufgabe_2.Debug+ITSboard-stamp/Aufgabe_2.Debug+ITSboard-database	97f7b57ab8fd8bab
+260	4963	7853344877177309	Aufgabe_2.Debug+ITSboard/src/Aufgabe_2.Debug+ITSboard-stamp/Aufgabe_2.Debug+ITSboard-configure	43b1260a51361d55
+260	4963	7853344877177309	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe_2/tmp/Aufgabe_2.Debug+ITSboard/src/Aufgabe_2.Debug+ITSboard-stamp/Aufgabe_2.Debug+ITSboard-configure	43b1260a51361d55
+3	3132	7853347086891475	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe_2/tmp/Aufgabe_2.Debug+ITSboard/src/Aufgabe_2.Debug+ITSboard-stamp/Aufgabe_2.Debug+ITSboard-database	97f7b57ab8fd8bab
+3	3025	7853348616677683	Aufgabe_2.Debug+ITSboard/src/Aufgabe_2.Debug+ITSboard-stamp/Aufgabe_2.Debug+ITSboard-database	97f7b57ab8fd8bab
+3	3025	7853348616677683	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe_2/tmp/Aufgabe_2.Debug+ITSboard/src/Aufgabe_2.Debug+ITSboard-stamp/Aufgabe_2.Debug+ITSboard-database	97f7b57ab8fd8bab

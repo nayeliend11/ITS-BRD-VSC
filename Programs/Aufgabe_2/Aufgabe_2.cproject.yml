@@ -172,12 +172,14 @@ project:
     - group: Program/User/Inc
       files:
         - file: ../../ITS_BRD_LIB/Inc/lcd.h
+        - file: Inc/logic.h
 
 
     # Benutzerdefinierte Programmdateien
     - group: Program/User/Src
       files:
         - file: Src/main.c
+        - file: Src/logic.c
 
 
   components:
