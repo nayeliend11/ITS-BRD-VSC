@@ -4,22 +4,27 @@
 #include <limits.h>
 
 int plus(Stack *stack){
-    int a, b, errorCode;
+    int a, b, errorCode,sum;
     errorCode = stack->pop(stack, &a);
     if(errorCode != EOK)return errorCode;
     errorCode = stack->pop(stack, &b);
     if(errorCode != EOK)return errorCode;
-    long sum = a+b;
-    if(sum > INT_MAX )
-{
-   return error_handler(NUMBER_OVERFLOW);
-}  if (sum < INT_MIN){
-    return error_handler(NUMBER_UNDERFLOW);
-} else {
-errorCode = stack->push(stack, sum);
-if(errorCode != EOK)return errorCode;
-}
-return EOK;
+
+    if(a >= 0){
+        if( b > INT_MAX - a){
+            return NUMBER_OVERFLOW;
+        }
+    }
+    else{
+        if( b < INT_MIN - a){
+            return NUMBER_UNDERFLOW;
+        }
+    }
+
+    sum = a+b;
+    errorCode = stack->push(stack, sum);
+    if(errorCode != EOK)return errorCode;
+    return EOK;
   
 }
 
@@ -29,18 +34,20 @@ int minus(Stack *stack){
     if(errorCode != EOK)return errorCode;
     errorCode = stack->pop(stack, &b);
     if(errorCode != EOK)return errorCode;
-    long sum = b-a;
-      if(sum > INT_MAX )
-{
-   return error_handler(NUMBER_OVERFLOW);
-}  if (sum < INT_MIN){
-    return error_handler(NUMBER_UNDERFLOW);
-} else {
+    long long sum = b-a;
+    if(a >= 0){
+        if(b < INT_MIN + a){
+            return NUMBER_UNDERFLOW;
+        }
+    } else {
+        if (b > INT_MAX + a) {
+            return NUMBER_OVERFLOW;
+        }
+    }
+
     errorCode = stack->push (stack, sum); 
     if(errorCode != EOK)return errorCode;
-
-}
-return EOK;
+    return EOK;
 }
 
 int multiply(Stack *stack){
