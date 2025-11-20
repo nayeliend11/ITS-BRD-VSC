@@ -3,7 +3,6 @@
 #include "errors.h"
 #include "stack.h"
 #include <limits.h>
-#include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
 
@@ -75,7 +74,7 @@ int printStack(Stack *stack){
 
         printStdout(buffer);
         i--;
-    }while (i>0);
+    }while (i>=0);
     return EOK; 
 
 }

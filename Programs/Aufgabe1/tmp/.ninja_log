@@ -1,4 +1,5 @@
 # ninja log v6
+<<<<<<< HEAD
 2	26	1763623553222285729	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-mkdir	8571d2dd6d0d3868
 2	26	1763623553222285729	/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-mkdir	8571d2dd6d0d3868
 26	42	1763623553238524127	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-download	716993295b743d1e
@@ -24,3 +25,43 @@
 23638	23676	1763623576872133644	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-done	e7e0a75830f81ca5
 23638	23676	1763623576872133644	/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/tmp/CMakeFiles/Aufgabe1.Debug+ITSboard-complete	e7e0a75830f81ca5
 23638	23676	1763623576872133644	/Users/nayeliend/Desktop/HAW/ITS-BRD-VSC/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-done	e7e0a75830f81ca5
+=======
+162	216	7852601820713572	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-patch	441ad75242ffbf96
+2	58	7852601819153008	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-mkdir	9f85695d7865e8c8
+112	161	7852601820181640	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-update	1902a0b4f042d2a6
+112	161	7852601820181640	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-update	1902a0b4f042d2a6
+2	58	7852601819153008	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-mkdir	9f85695d7865e8c8
+5	324	7853317211792885	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-build	627d3cb085f17185
+59	110	7852601819670469	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-download	4a80e746c9a4b5df
+59	110	7852601819670469	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-download	4a80e746c9a4b5df
+162	216	7852601820713572	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-patch	441ad75242ffbf96
+216	4850	7852601867060215	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-configure	1d403fada8adff46
+216	4850	7852601867060215	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-configure	1d403fada8adff46
+5	324	7853317211792885	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-build	627d3cb085f17185
+5	324	7853317211792885	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/out/Aufgabe1/ITSboard/Debug/Aufgabe1.axf	627d3cb085f17185
+7321	7382	7852601892358542	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-executes	12bec54eac449efe
+7321	7382	7852601892358542	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-executes	12bec54eac449efe
+325	472	7853317215005358	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-database	2df842b87b0dd454
+325	472	7853317215005358	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-database	2df842b87b0dd454
+472	503	7853317216479948	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-install	82c6e0d4cf25ae7
+472	503	7853317216479948	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-install	82c6e0d4cf25ae7
+503	557	7853317217269927	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-test	db3a9d7277b3a3ab
+503	557	7853317217269927	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-test	db3a9d7277b3a3ab
+558	634	7853317218025118	CMakeFiles/Aufgabe1.Debug+ITSboard-complete	3a4b1d9c20f17c6f
+558	634	7853317218025118	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-done	3a4b1d9c20f17c6f
+558	634	7853317218025118	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/CMakeFiles/Aufgabe1.Debug+ITSboard-complete	3a4b1d9c20f17c6f
+558	634	7853317218025118	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-done	3a4b1d9c20f17c6f
+7	506	7853318586337393	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-build	627d3cb085f17185
+7	506	7853318586337393	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/out/Aufgabe1/ITSboard/Debug/Aufgabe1.axf	627d3cb085f17185
+7	506	7853318586337393	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-build	627d3cb085f17185
+507	668	7853318591344840	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-database	2df842b87b0dd454
+507	668	7853318591344840	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-database	2df842b87b0dd454
+668	701	7853318592951163	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-install	82c6e0d4cf25ae7
+668	701	7853318592951163	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-install	82c6e0d4cf25ae7
+701	755	7853318593771544	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-test	db3a9d7277b3a3ab
+701	755	7853318593771544	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-test	db3a9d7277b3a3ab
+755	841	7853318594627463	CMakeFiles/Aufgabe1.Debug+ITSboard-complete	3a4b1d9c20f17c6f
+755	841	7853318594627463	Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-done	3a4b1d9c20f17c6f
+755	841	7853318594627463	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/CMakeFiles/Aufgabe1.Debug+ITSboard-complete	3a4b1d9c20f17c6f
+755	841	7853318594627463	C:/Users/User/OneDrive/Desktop/GSP/ITS-BRD-GS/Programs/Aufgabe1/tmp/Aufgabe1.Debug+ITSboard/src/Aufgabe1.Debug+ITSboard-stamp/Aufgabe1.Debug+ITSboard-done	3a4b1d9c20f17c6f
+>>>>>>> refs/remotes/origin/main

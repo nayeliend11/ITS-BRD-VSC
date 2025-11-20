@@ -1,6 +1,5 @@
 #include "stack.h"
 #include "errors.h"
-#include "token.h"
 #include <stdbool.h>
 #include <stdlib.h>
 

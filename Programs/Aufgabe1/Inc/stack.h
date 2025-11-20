@@ -2,7 +2,7 @@
 #ifndef STACK_H
 #define STACK_H
 
-#include "errors.h"
+
 #include <stdbool.h>
 
 #define EMPTY_STACK -1
