@@ -173,6 +173,8 @@ project:
       files:
         - file: ../../ITS_BRD_LIB/Inc/lcd.h
         - file: Inc/logic.h
+        - file: Inc/led.h
+        - file: Inc/taster.h
 
 
     # Benutzerdefinierte Programmdateien
@@ -180,6 +182,8 @@ project:
       files:
         - file: Src/main.c
         - file: Src/logic.c
+        - file: Src/led.c
+        - file: Src/taster.c
 
 
   components:
