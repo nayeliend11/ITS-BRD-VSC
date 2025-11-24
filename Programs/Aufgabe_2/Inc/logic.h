@@ -6,9 +6,9 @@
 typedef struct Status Status;
 struct Status{
     bool vorwärts;
-    u_short anzahl_phasenwechsel;
-    drehgeschwindigkeit;
-    winkel;
+    short anzahl_phasenwechsel;
+    int drehgeschwindigkeit;
+    int winkel;
 };
 
 #endif
