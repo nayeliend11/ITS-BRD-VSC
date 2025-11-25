@@ -120,5 +120,8 @@
     "--compile-commands-dir=c:\\Users\\User\\OneDrive\\Desktop\\GSP\\ITS-BRD-GS\\Programs\\Aufgabe_2\\out\\Aufgabe_2\\ITSboard\\Debug"
   ],
   "debug.hideSlowPreLaunchWarning": true,
-  "debug.showInStatusBar": "never"
+  "debug.showInStatusBar": "never",
+  "files.associations": {
+    "errors.h": "c"
+  }
 }

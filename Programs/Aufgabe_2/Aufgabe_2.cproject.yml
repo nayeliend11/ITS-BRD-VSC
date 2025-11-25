@@ -186,6 +186,7 @@ project:
         - file: Src/led.c
         - file: Src/taster.c
         - file: Src/errors.c
+        - file: Src/input.c
 
 
   components:
