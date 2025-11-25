@@ -175,6 +175,7 @@ project:
         - file: Inc/logic.h
         - file: Inc/led.h
         - file: Inc/taster.h
+        - file: Inc/errors.h
 
 
     # Benutzerdefinierte Programmdateien
@@ -184,6 +185,7 @@ project:
         - file: Src/logic.c
         - file: Src/led.c
         - file: Src/taster.c
+        - file: Src/errors.c
 
 
   components:
