@@ -5,5 +5,7 @@
 int error_handler(int errorCode){
     char *errorMsg;
     int returnVal = EOK;
-    setErrMode();
+    //setErrMode();
     switch (errorCode) {
+    }
+}
