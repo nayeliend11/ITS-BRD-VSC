@@ -172,21 +172,29 @@ project:
     - group: Program/User/Inc
       files:
         - file: ../../ITS_BRD_LIB/Inc/lcd.h
-        - file: Inc/logic.h
-        - file: Inc/led.h
-        - file: Inc/taster.h
         - file: Inc/errors.h
+        - file: Inc/general.h
+        - file: Inc/gpio.h
+        - file: Inc/input.h
+        - file: Inc/led.h
+        - file: Inc/logic.h
+        - file: Inc/main.h
+        - file: Inc/output.h
+        - file: Inc/taster.h
+        
 
 
     # Benutzerdefinierte Programmdateien
     - group: Program/User/Src
       files:
-        - file: Src/main.c
-        - file: Src/logic.c
-        - file: Src/led.c
-        - file: Src/taster.c
         - file: Src/errors.c
+        - file: Src/gpio.c
         - file: Src/input.c
+        - file: Src/led.c
+        - file: Src/logic.c
+        - file: Src/main.c
+        - file: Src/output.c
+        - file: Src/taster.c
 
 
   components:
