@@ -7,8 +7,8 @@ typedef struct Status Status;
 struct Status{
     bool vorwärts;
     short anzahl_phasenwechsel;
-    int drehgeschwindigkeit;
-    int winkel;
+    double drehgeschwindigkeit;
+    double winkel;
 };
 
 #endif

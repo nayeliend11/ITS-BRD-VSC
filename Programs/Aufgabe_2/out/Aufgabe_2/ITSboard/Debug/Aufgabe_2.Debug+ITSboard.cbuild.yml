@@ -325,19 +325,39 @@ build:
       files:
         - file: ../../../../../../ITS_BRD_LIB/Inc/lcd.h
           category: header
-        - file: ../../../../Inc/logic.h
+        - file: ../../../../Inc/errors.h
+          category: header
+        - file: ../../../../Inc/general.h
+          category: header
+        - file: ../../../../Inc/gpio.h
+          category: header
+        - file: ../../../../Inc/input.h
           category: header
         - file: ../../../../Inc/led.h
+          category: header
+        - file: ../../../../Inc/logic.h
+          category: header
+        - file: ../../../../Inc/main.h
+          category: header
+        - file: ../../../../Inc/output.h
           category: header
         - file: ../../../../Inc/taster.h
           category: header
     - group: Program/User/Src
       files:
-        - file: ../../../../Src/main.c
+        - file: ../../../../Src/errors.c
+          category: sourceC
+        - file: ../../../../Src/gpio.c
+          category: sourceC
+        - file: ../../../../Src/input.c
+          category: sourceC
+        - file: ../../../../Src/led.c
           category: sourceC
         - file: ../../../../Src/logic.c
           category: sourceC
-        - file: ../../../../Src/led.c
+        - file: ../../../../Src/main.c
+          category: sourceC
+        - file: ../../../../Src/output.c
           category: sourceC
         - file: ../../../../Src/taster.c
           category: sourceC

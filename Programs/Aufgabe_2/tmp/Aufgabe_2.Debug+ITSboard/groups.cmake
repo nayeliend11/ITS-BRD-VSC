@@ -205,9 +205,13 @@ target_link_libraries(Group_Program_User_Inc_ABSTRACTIONS INTERFACE
 
 # group Program/User/Src
 add_library(Group_Program_User_Src OBJECT
-  "${SOLUTION_ROOT}/Src/main.c"
-  "${SOLUTION_ROOT}/Src/logic.c"
+  "${SOLUTION_ROOT}/Src/errors.c"
+  "${SOLUTION_ROOT}/Src/gpio.c"
+  "${SOLUTION_ROOT}/Src/input.c"
   "${SOLUTION_ROOT}/Src/led.c"
+  "${SOLUTION_ROOT}/Src/logic.c"
+  "${SOLUTION_ROOT}/Src/main.c"
+  "${SOLUTION_ROOT}/Src/output.c"
   "${SOLUTION_ROOT}/Src/taster.c"
 )
 target_include_directories(Group_Program_User_Src PUBLIC
