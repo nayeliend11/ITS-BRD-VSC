@@ -44,7 +44,8 @@ int main(void) {
 
 	}*/
 
-	stdLayout();
+	initLayout();
+	printError("Hello World");
 	return EOK;
 }
 

@@ -6,7 +6,7 @@
 *@Brief Gibt das Standartlayout auf dem Display aus. Das StandartLayout ist der Text der während der Laufzeit auf dem Display zusehen ist.
 *@Return EOK wird zurückgegeben, wenn kein Fehler auftritt.
 */
-int stdLayout();
+int initLayout();
 /*
 *@Brief Gibt den übergebenden String als Fehlermeldung aus.
 *@Param err_msg ist ein Pointer auf ein String, welcher ausgegeben werden soll.
@@ -16,11 +16,13 @@ int printError(char* err_msg);
 *@Brief Entfernt alle 
 *@Param
 */
-int printWinkel(char* winkel, int pos);
+int setWinkel(char* winkel);
 /*
 *@Brief Entfernt alle 
 *@Param
 */
-int printWinkelges(char* winkelges, int pos);
+int setWinkelges(char* winkelges);
+
+int printNumbers();
 #endif
 //eof
