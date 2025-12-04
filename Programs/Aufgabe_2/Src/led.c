@@ -37,12 +37,12 @@ int setBinaryLeds(int number){
 
 int setDirectionrayLeds(bool forward){
     if(forward){
-        setGpioPin(GPIOE, 7, true);
-        setGpioPin(GPIOE, 6, false);
+        setGpioPin(GPIOE, FORWARD_LED_PIN, true);
+        setGpioPin(GPIOE, BACKWARD_LED_PIN, false);
     }
     else {
-        setGpioPin(GPIOE, 7, false);
-        setGpioPin(GPIOE, 6, true);
+        setGpioPin(GPIOE, FORWARD_LED_PIN, false);
+        setGpioPin(GPIOE, BACKWARD_LED_PIN, true);
     }
     return EOK;
 }
