@@ -17,7 +17,7 @@ int errorLedOff();
 *@Param: number ist die in binär darzustellende Zahl
 *@return: EOK wird zurückgegeben, wenn keine Fehler aufgetreten sind
 */
-int setBinaryLeds(short number);
+int setBinaryLeds(int number);
 /*
 *@Brief: Setzt D23 wenn eine vorwärst Richtung erkannt wurde und D22 bei einer rückwärts Richtung
 *@Param: number ist die in binär darzustellende Zahl

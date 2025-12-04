@@ -38,14 +38,7 @@ int main(void) {
 		//Berechnung
 
 
-	}
-		*/
-		while (1) {
-		setGpioReg(GPIOD, 0xf0, true);
-		waitForTaster();
-		setGpioReg(GPIOD, 0xf0, false);
-		waitForTaster();
-		}
+	}*/
 		
 		
 	return EOK;
