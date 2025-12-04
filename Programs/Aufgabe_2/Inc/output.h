@@ -1,5 +1,6 @@
 #ifndef OUTPUT_H
 #define OUTPUT_H
+#include "terminal.h"
 
 /*
 *@Brief Gibt das Standartlayout auf dem Display aus. Das StandartLayout ist der Text der während der Laufzeit auf dem Display zusehen ist.
@@ -15,11 +16,11 @@ int printError(char* err_msg);
 *@Brief Entfernt alle 
 *@Param
 */
-int printWinkel(int winkel);
+int printWinkel(char* winkel, int pos);
 /*
 *@Brief Entfernt alle 
 *@Param
 */
-int printWinkelges(int winkelges);
+int printWinkelges(char* winkelges, int pos);
 #endif
 //eof

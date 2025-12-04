@@ -7,8 +7,11 @@
   */
 /* Includes ------------------------------------------------------------------*/
 
+#include "LCD_general.h"
 #include "errors.h"
+#include "fonts.h"
 #include "led.h"
+#include "output.h"
 #include "stm32f429xx.h"
 #include "stm32f4xx_hal.h"
 #include "init.h"
@@ -21,6 +24,7 @@
 #include "gpio.h"
 #include "taster.h"
 #include <stdbool.h>
+#include "terminal.h"
 
 
 int main(void) {
@@ -39,8 +43,8 @@ int main(void) {
 
 
 	}*/
-		
-		
+
+	stdLayout();
 	return EOK;
 }
 
