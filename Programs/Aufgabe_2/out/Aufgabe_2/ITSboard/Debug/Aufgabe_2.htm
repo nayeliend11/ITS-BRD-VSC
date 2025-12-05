@@ -3,11 +3,11 @@
 <title>Static Call Graph - [C:\Users\User\OneDrive\Desktop\GSP\ITS-BRD-GS\Programs\Aufgabe_2\out\Aufgabe_2\ITSboard\Debug\Aufgabe_2.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image C:\Users\User\OneDrive\Desktop\GSP\ITS-BRD-GS\Programs\Aufgabe_2\out\Aufgabe_2\ITSboard\Debug\Aufgabe_2.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Thu Dec  4 10:05:33 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Fri Dec  5 14:58:11 2025
 <BR><P>
-<H3>Maximum Stack Usage =        928 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        944 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-main &rArr; stdLayout &rArr; printTerm &rArr; printNewLine &rArr; printChar &rArr; clearTerm &rArr; GUI_drawRectangle &rArr; printDebugMsg &rArr; GUI_disNum &rArr;  printDebugMsg (Cycle)
+main &rArr; initLayout &rArr; printTerm &rArr; printNewLine &rArr; printChar &rArr; clearTerm &rArr; GUI_drawRectangle &rArr; printDebugMsg &rArr; GUI_disNum &rArr;  printDebugMsg (Cycle)
 <P>
 <H3>
 Mutually Recursive functions
@@ -480,7 +480,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[e8]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
+<P><STRONG><a name="[ea]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcdPrintS
 </UL>
 
@@ -557,7 +557,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printDebugMsg
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_fillRectangleBW
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printChar
+<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printChar
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_disStr
 </UL>
 
@@ -1010,7 +1010,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_drawRectangle
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printChar
+<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printChar
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;genTerm
 </UL>
 
@@ -1021,7 +1021,7 @@ Global Symbols
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcdPrintS
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stdLayout
+<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLayout
 </UL>
 
 <P><STRONG><a name="[e6]"></a>initITSboard</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, init.o(.text.initITSboard))
@@ -1031,6 +1031,15 @@ Global Symbols
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stdinout_init
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initGPIOs
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+</UL>
+<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[e8]"></a>initLayout</STRONG> (Thumb, 1318 bytes, Stack size 368 bytes, output.o(.text.initLayout))
+<BR><BR>[Stack]<UL><LI>Max Depth = 928<LI>Call Chain = initLayout &rArr; printTerm &rArr; printNewLine &rArr; printChar &rArr; clearTerm &rArr; GUI_drawRectangle &rArr; printDebugMsg &rArr; GUI_disNum &rArr;  printDebugMsg (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printTerm
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;genTerm
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1046,8 +1055,8 @@ Global Symbols
 <P><STRONG><a name="[e4]"></a>lcdPrintS</STRONG> (Thumb, 466 bytes, Stack size 16 bytes, lcd.o(.text.lcdPrintS))
 <BR><BR>[Stack]<UL><LI>Max Depth = 504<LI>Call Chain = lcdPrintS &rArr; GUI_drawRectangle &rArr; printDebugMsg &rArr; GUI_disNum &rArr;  printDebugMsg (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stringCopy
+<BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stringCopy
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_disStr
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_drawRectangle
 </UL>
@@ -1055,23 +1064,23 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[64]"></a>main</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, main.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 928<LI>Call Chain = main &rArr; stdLayout &rArr; printTerm &rArr; printNewLine &rArr; printChar &rArr; clearTerm &rArr; GUI_drawRectangle &rArr; printDebugMsg &rArr; GUI_disNum &rArr;  printDebugMsg (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 944<LI>Call Chain = main &rArr; initLayout &rArr; printTerm &rArr; printNewLine &rArr; printChar &rArr; clearTerm &rArr; GUI_drawRectangle &rArr; printDebugMsg &rArr; GUI_disNum &rArr;  printDebugMsg (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printError
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stdLayout
+<BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printError
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLayout
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initITSboard
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TP_InitBasic
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[ec]"></a>printChar</STRONG> (Thumb, 156 bytes, Stack size 24 bytes, terminal.o(.text.printChar))
+<P><STRONG><a name="[ed]"></a>printChar</STRONG> (Thumb, 156 bytes, Stack size 24 bytes, terminal.o(.text.printChar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 528<LI>Call Chain = printChar &rArr; clearTerm &rArr; GUI_drawRectangle &rArr; printDebugMsg &rArr; GUI_disNum &rArr;  printDebugMsg (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clearTerm
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_disChar
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printTerm
+<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printTerm
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printNewLine
 </UL>
 
@@ -1087,31 +1096,22 @@ Global Symbols
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_drawRectangle
 </UL>
 
-<P><STRONG><a name="[eb]"></a>printError</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, output.o(.text.printError))
+<P><STRONG><a name="[ec]"></a>printError</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, output.o(.text.printError))
 <BR><BR>[Stack]<UL><LI>Max Depth = 576<LI>Call Chain = printError &rArr; printTerm &rArr; printNewLine &rArr; printChar &rArr; clearTerm &rArr; GUI_drawRectangle &rArr; printDebugMsg &rArr; GUI_disNum &rArr;  printDebugMsg (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printTerm
+<BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printTerm
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ed]"></a>printTerm</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, terminal.o(.text.printTerm))
+<P><STRONG><a name="[e9]"></a>printTerm</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, terminal.o(.text.printTerm))
 <BR><BR>[Stack]<UL><LI>Max Depth = 560<LI>Call Chain = printTerm &rArr; printNewLine &rArr; printChar &rArr; clearTerm &rArr; GUI_drawRectangle &rArr; printDebugMsg &rArr; GUI_disNum &rArr;  printDebugMsg (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printChar
+<BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printChar
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printNewLine
 </UL>
-<BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printError
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stdLayout
-</UL>
-
-<P><STRONG><a name="[ea]"></a>stdLayout</STRONG> (Thumb, 1118 bytes, Stack size 352 bytes, output.o(.text.stdLayout))
-<BR><BR>[Stack]<UL><LI>Max Depth = 912<LI>Call Chain = stdLayout &rArr; printTerm &rArr; printNewLine &rArr; printChar &rArr; clearTerm &rArr; GUI_drawRectangle &rArr; printDebugMsg &rArr; GUI_disNum &rArr;  printDebugMsg (Cycle)
-</UL>
-<BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printTerm
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;genTerm
-</UL>
-<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printError
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLayout
 </UL>
 
 <P><STRONG><a name="[e7]"></a>stdinout_init</STRONG> (Thumb, 174 bytes, Stack size 16 bytes, stdinout_USART.o(.text.stdinout_init))
@@ -1323,7 +1323,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
 </UL>
 
-<P><STRONG><a name="[e9]"></a>stringCopy</STRONG> (Thumb, 70 bytes, Stack size 24 bytes, lcd.o(.text.stringCopy))
+<P><STRONG><a name="[eb]"></a>stringCopy</STRONG> (Thumb, 70 bytes, Stack size 24 bytes, lcd.o(.text.stringCopy))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = stringCopy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcdPrintS
@@ -1351,9 +1351,9 @@ Local Symbols
 <P><STRONG><a name="[ee]"></a>printNewLine</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, terminal.o(.text.printNewLine))
 <BR><BR>[Stack]<UL><LI>Max Depth = 544<LI>Call Chain = printNewLine &rArr; printChar &rArr; clearTerm &rArr; GUI_drawRectangle &rArr; printDebugMsg &rArr; GUI_disNum &rArr;  printDebugMsg (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printChar
+<BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printChar
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printTerm
+<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printTerm
 </UL>
 
 <P><STRONG><a name="[67]"></a>USARTx_GetVersion</STRONG> (Thumb, 18 bytes, Stack size 4 bytes, USART_STM32F4xx.o(.text.USARTx_GetVersion))
