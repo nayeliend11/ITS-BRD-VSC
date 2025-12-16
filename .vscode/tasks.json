@@ -6,13 +6,37 @@
             "type": "shell",
             "command": "pyocd",
             "options": {
-                "cwd": "${workspaceFolder}/Programs/Aufgabe_2",
-                "shell": {
-                    "executable": "cmd.exe",
-                    "args": [
-                        "/d",
-                        "/c"
-                    ]
+                "cwd": "${workspaceFolder}/Programs/Aufgabe_2"
+            },
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "cmd.exe",
+                        "args": [
+                            "/d",
+                            "/c"
+                        ]
+                    }
+                }
+            },
+            "linux": {
+                "options": {
+                    "shell": {
+                        "executable": "/bin/bash",
+                        "args": [
+                            "-c"
+                        ]
+                    }
+                }
+            },
+            "osx": {
+                "options": {
+                    "shell": {
+                        "executable": "/bin/bash",
+                        "args": [
+                            "-c"
+                        ]
+                    }
                 }
             },
             "args": [
@@ -30,13 +54,37 @@
             "type": "shell",
             "command": "pyocd",
             "options": {
-                "cwd": "${workspaceFolder}/Programs/Aufgabe_2",
-                "shell": {
-                    "executable": "cmd.exe",
-                    "args": [
-                        "/d",
-                        "/c"
-                    ]
+                "cwd": "${workspaceFolder}/Programs/Aufgabe_2"
+            },
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "cmd.exe",
+                        "args": [
+                            "/d",
+                            "/c"
+                        ]
+                    }
+                }
+            },
+            "linux": {
+                "options": {
+                    "shell": {
+                        "executable": "/bin/bash",
+                        "args": [
+                            "-c"
+                        ]
+                    }
+                }
+            },
+            "osx": {
+                "options": {
+                    "shell": {
+                        "executable": "/bin/bash",
+                        "args": [
+                            "-c"
+                        ]
+                    }
                 }
             },
             "args": [
@@ -53,13 +101,37 @@
             "type": "shell",
             "command": "pyocd",
             "options": {
-                "cwd": "${workspaceFolder}/Programs/Aufgabe_2",
-                "shell": {
-                    "executable": "cmd.exe",
-                    "args": [
-                        "/d",
-                        "/c"
-                    ]
+                "cwd": "${workspaceFolder}/Programs/Aufgabe_2"
+            },
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "cmd.exe",
+                        "args": [
+                            "/d",
+                            "/c"
+                        ]
+                    }
+                }
+            },
+            "linux": {
+                "options": {
+                    "shell": {
+                        "executable": "/bin/bash",
+                        "args": [
+                            "-c"
+                        ]
+                    }
+                }
+            },
+            "osx": {
+                "options": {
+                    "shell": {
+                        "executable": "/bin/bash",
+                        "args": [
+                            "-c"
+                        ]
+                    }
                 }
             },
             "args": [
@@ -92,13 +164,37 @@
             "type": "shell",
             "command": "pyocd",
             "options": {
-                "cwd": "${workspaceFolder}/Programs/Aufgabe_2",
-                "shell": {
-                    "executable": "cmd.exe",
-                    "args": [
-                        "/d",
-                        "/c"
-                    ]
+                "cwd": "${workspaceFolder}/Programs/Aufgabe_2"
+            },
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "cmd.exe",
+                        "args": [
+                            "/d",
+                            "/c"
+                        ]
+                    }
+                }
+            },
+            "linux": {
+                "options": {
+                    "shell": {
+                        "executable": "/bin/bash",
+                        "args": [
+                            "-c"
+                        ]
+                    }
+                }
+            },
+            "osx": {
+                "options": {
+                    "shell": {
+                        "executable": "/bin/bash",
+                        "args": [
+                            "-c"
+                        ]
+                    }
                 }
             },
             "args": [
