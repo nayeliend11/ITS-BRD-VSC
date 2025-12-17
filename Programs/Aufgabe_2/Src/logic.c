@@ -1,6 +1,8 @@
 #include "logic.h"
 
 
+#define NULL 0
+
 /**
  * @file logic.c
  * @brief Logic Module - Phase detection and calculations

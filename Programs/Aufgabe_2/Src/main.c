@@ -23,6 +23,7 @@
 #include "error.h"
 #include "gpio.h"
 #include "taster.h"
+#include <math.h>
 #include <stdbool.h>
 #include "terminal.h"
 

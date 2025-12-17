@@ -6,7 +6,6 @@
 #define MAX_PIN 7
 #define MIN_PIN 0
 
-#define PIN_OUT_OF_RANGE -1
 
 int setGpioPin(GPIO_TypeDef* gpio, int pin, bool on){
     if (pin < MIN_PIN || pin > MAX_PIN) {

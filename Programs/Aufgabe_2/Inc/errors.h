@@ -17,6 +17,7 @@ int error_handler(int errorCode);
 #define EOK                 0    /* No error */
 #define ERROR_PHASE_SKIP    1    /* Encoder phase skipped */
 #define ERROR_GPIO          2    /* GPIO error */
+#define PIN_OUT_OF_RANGE    3
 
 /**
  * @brief Initialize error module
